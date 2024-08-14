@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .moveBall{
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border-top: solid 20px #ff0000;
+    border-bottom: solid 20px #ff0000;
+    border-left: solid 20px #0000ff;
+    border-right: solid 20px #0000ff;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    animation: moving 1s ease-in-out 1s infinite alternate both running;
+    transform-origin: center;
+} */
+/* @keyframes moving{
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+    100%{
+        transform: translateY(800px) rotate(1200deg);
+    }
+} */
+.moveBall{
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border-top: solid 20px #ff0000;
+    border-bottom: solid 20px #ff0000;
+    border-left: solid 20px #0000ff;
+    border-right: solid 20px #0000ff;
+    border-radius: 50%;
+    position: fixed;
+    left: calc(50% - 120px);
+    /* position: relative;는 기준점이 없음 */
+
+    animation: moving 1s ease-in-out 1s infinite alternate both running;
+    transform-origin: center;
+}
+@keyframes moving{
+    0%{
+        top: 0;
+        transform: rotate(0);
+    }
+    100%{
+        top: 80%;
+        transform: rotate(1200deg);
+    }
+}

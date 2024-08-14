@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1번 문제</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test-1.css">
+</head>
+<body>
+    <form id="join">
+        <fieldset>
+            <h2>로그인</h2>
+            <ul class="login-box">
+                <li>
+                    <input type="text" minlength="5" maxlength="12" name="id" placeholder="아이디">
+                </li>
+                <li>
+                    <input type="password" minlength="6" maxlength="10" name="pw" placeholder="패스워드">
+                </li>
+            </ul>
+            <span>
+                <input type="checkbox" name="auto-login" id="auto-login" checked>
+                <label for="auto-login">자동로그인</label>
+            </span>
+            <input type="submit" name="login" id="login" value="확인">
+            <ul class="link-box">
+                <li>
+                    <span><a href="#">회원가입</a></span>
+                </li>
+                <li>
+                    <span class="lineEffect"></span>
+                </li>
+                <li>
+                    <span><a href="#">아이디/비밀번호찾기</a></span>
+                </li>
+            </ul>
+            <ul class="sns-login">
+                <li>
+                    <a href="#" class="facebook">페이스북</a>       
+                </li>
+                <li>
+                    <a href="#" class="google">구글</a>
+                </li>
+                <li>
+                    <a href="#" class="naver">네이버</a>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

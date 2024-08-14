@@ -1,0 +1,148 @@
+@charset "UTF-8";
+.nanum-gothic-regular{
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+html,body{
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 14px;
+}
+
+#container{
+    width: 500px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 40px 0;
+}
+#container h2{
+    margin: 40px 0;
+    text-align: center;
+    color: #f2562e;
+}
+#container .join{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+#container .login-box{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input::placeholder{
+    color: #aaa;
+}
+input[name="email"],
+input[name="pw"]{
+    display: block;
+    width: 100%;
+    height: 32px;
+    text-indent: 8px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid 1px #f2f2f2;
+    outline: none;
+    color: #444;
+}
+
+#container fieldset > span{
+    margin: 0 0 0 28px;
+}
+input[name="auto-login"]{
+    accent-color: #333;
+}
+#container fieldset > span label{
+    color: #ccc;
+}
+
+input[name="login"]{
+    display: block;
+    height: 60px;
+    width: 90%;
+    margin: 20px auto;
+    border: 0;
+    background-color: #f2562e;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+input[name="login"]:hover{
+    background-color: #000;
+}
+
+#container .link-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 54%;
+    margin: 0 auto;
+}
+#container .link-box li span:hover a{
+    border-bottom: solid 1px #333;
+}
+#container .link-box li span a{
+    color: #ccc;
+}
+#container .link-box li span::after{
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 10px;
+    border-right: solid 1px #ccc;
+    padding: 0 2px 0 0;
+}
+#container .link-box li:last-child span::after{
+    border-right: none;
+}
+
+#container .sns-login{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 40px auto 40px;
+    text-align: center;
+    padding: 20px 20px 0;
+    border-top: solid 1px #ccc;
+}
+#container .sns-login li{
+    width: 30%;
+}
+#container .sns-login li a{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+#container .facebook{
+    background-color: #3b5997;
+    color: #fff;
+}
+#container .google{
+    background-color: #fff;
+    border: solid 1px #333;
+    box-sizing: border-box;
+    color: #333;
+}
+#container .naver{
+    background-color: #3dbb19;
+    color: #fff;
+}

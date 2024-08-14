@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그 테스트 연습</title>
+    <link rel="stylesheet" href="../css/formTest.css">
+</head>
+<body>
+    <form id="join">
+        <fieldset>
+            <h2>로그인</h2>
+            <ul class="login-box">
+                <li>
+                    <input type="email" pattern=".+@example\.com" name="id" placeholder="green@gmail.com" required autofocus>
+                </li>
+                <li>
+                    <input type="password" name="pw" placeholder="비밀번호" required>
+                </li>
+            </ul>
+            <div class="check-Box">
+                <span>
+                    <input type="checkbox" id="autoLogin">
+                    <label for="autoLogin">자동로그인</label>
+                </span>
+                <a href="#">아이디(이메일)/비밀번호 찾기</a>
+            </div>
+            <input type="submit" value="로그인">
+            <a href="#" class="join-btn">회원가입</a>
+            <ul class="sns-join">
+                <li>
+                    <a href="#" class="naver">네이버</a>
+                </li>
+                <li>
+                    <a href="#" class="google">구글</a>
+                </li>
+                <li>
+                    <a href="#" class="facebook">페이스북</a>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- .+ 는 모든 문자
++ 문자가 하나 이상 있다 -->

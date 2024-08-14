@@ -1,0 +1,24 @@
+.any{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #333;
+    border-top: solid 20px #ff0000;
+    border-bottom: solid 20px #ff0000;
+    border-left: solid 20px #0000ff;
+    border-right: solid 20px #0000ff;
+    left: calc(50% - 120px);
+
+    animation: topMove 1s ease-in-out 3s infinite alternate both;
+}
+@keyframes topMove{
+    0%{
+        top: 0;
+        transform: rotate(0);
+    }
+    100%{
+        top: 60%;
+        transform: rotate(1200deg);
+    }
+}

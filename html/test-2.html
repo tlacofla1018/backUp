@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2번 문제</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test-2.css">
+</head>
+<body>
+    <div id="container">
+        <h2>로그인</h2>
+        <form class="join">
+            <fieldset>
+                <ul class="login-box">
+                    <li>
+                        <input type="email" name="email" pattern=".+@example\.com" placeholder="이메일 주소" required>
+                    </li>
+                    <li>
+                        <input type="password" minlength="6" maxlength="10" name="pw" placeholder="패스워드" required>
+                    </li>
+                </ul>
+                <span>
+                    <input type="checkbox" name="auto-login" id="auto-login" checked>
+                    <label for="auto-login">로그인 상태 유지</label>
+                </span>
+                <input type="submit" name="login" id="login" value="로그인">
+                <ul class="link-box">
+                    <li>
+                        <span>
+                            <a href="#">아이디 찾기</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#">비밀번호 찾기</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#">회원가입</a>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="sns-login">
+                    <li>
+                        <a href="#" class="facebook">페이스북</a>       
+                    </li>
+                    <li>
+                        <a href="#" class="google">구글</a>
+                    </li>
+                    <li>
+                        <a href="#" class="naver">네이버</a>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

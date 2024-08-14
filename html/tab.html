@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab태그 필기</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #tab{
+            width: 40vw;
+            margin: 5vh auto 0;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        #tab > li{
+            width: 50%;
+            border-right: solid 1px #fff;
+        }
+        #tab > li:last-child{
+            border-right: 0;
+        }
+        #tab > li input{
+            display: none;
+        }
+        #tab > li label{
+            display: block;
+            background-color: #ccc;
+            color: #767676;
+            text-align: center;
+            line-height: 3;
+            /* line-height: 3; 3배 */
+        }
+        #tab .ab-box{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-color: #fff;
+            border: solid 1px #767676;
+            box-sizing: border-box;
+            /* 아웃사이드를 인사이드로 바꿈 패딩에도 적용됨 */
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #tab > li input:checked ~.ab-box{
+            z-index: 90;
+        }
+        /* 인풋에 체크드 걸렸을 때 그 인풋의 동생 중에 앱박스야 들어 */
+        #tab > li input:checked + label{
+            background-color: #767676;
+            color: #fff;
+        }
+        #tab .notice-content li{}
+        #tab .notice-content li a{
+            color: #000;
+            /* display: flex;
+            align-items: center;
+            gap: 10px; */
+            display: block; /*반드시 블록요소여야함*/
+            width: 80%; /*반드시 위드값이 존재해야함*/
+            overflow: hidden; /*너비를 넘어가면 안보이게*/
+            white-space: nowrap; /*두줄처리 방지*/
+            text-overflow: ellipsis; /*...처리*/
+        }
+        /* #tab .notice-content li a::before{
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+        } */
+    </style>    
+</head>
+<body>
+    <ul id="tab">
+        <li>
+            <input type="radio" id="notice" name="tab-box" checked>
+            <!-- 네임이 걸려있어야 배반적 선택이 가능함 -->
+            <label for="notice">공지사항</label>
+            <div class="ab-box">
+                <ul class="notice-content">
+                    <li><a href="#">공지사항 안내문 입니다. 좀 길게 갈거거든여 쭈우우우우우우우우우우우욱 쓸거에요</a></li>
+                    <li><a href="#">공지사항 안내문 입니다. 좀 길게 갈거거든여 쭈우우우우우우우우우우우욱 쓸거에요</a></li>
+                    <li><a href="#">공지사항 안내문 입니다. 좀 길게 갈거거든여 쭈우우우우우우우우우우우욱 쓸거에요</a></li>
+                    <li><a href="#">공지사항 안내문 입니다. 좀 길게 갈거거든여 쭈우우우우우우우우우우우욱 쓸거에요</a></li>
+                    <li><a href="#">공지사항 안내문 입니다. 좀 길게 갈거거든여 쭈우우우우우우우우우우우욱 쓸거에요</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="board" name="tab-box">
+            <label for="board">게시판</label>
+            <div class="ab-box">
+                <p>게시판 리스트가 들어올거임</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="notice2" name="tab-box">
+            <label for="notice2">공지사항</label>
+            <div class="ab-box">
+                <p>공지사항 들어올거임</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="board2" name="tab-box">
+            <label for="board2">게시판</label>
+            <div class="ab-box">
+                <p>게시판 리스트가 들어올거임</p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

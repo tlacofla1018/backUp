@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#join{
+    margin: 0 auto;
+    width: 50vw;
+    text-align: center;
+}
+#join fieldset{}
+#join fieldset h2{}
+#join fieldset .login-box{
+    width: 90%;
+    margin: auto;
+}
+#join fieldset .login-box li{
+    margin: 10px 0;
+}
+input[type="email"]{
+    display: block;
+    width: 100%;
+    height: 24px;
+    outline: none;
+    text-indent: 4px;
+}
+input[type="password"]{
+    display: block;
+    width: 100%;
+    height: 24px;
+    outline: none;
+    text-indent: 4px;
+
+}
+.check-Box{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.check-Box span{}
+input[type="checkbox"]{}
+.check-Box span label{}
+.check-Box a{
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+}
+.check-Box a::after{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px #333;
+    border-right: solid 2px #333;
+    transform: rotate(45deg);
+}
+input[type="submit"]{
+    background-color: #333;
+    color: #fff;
+    
+}
+.join-btn{
+    background-color: #ccc;
+    color: #333;
+    display: block;
+    line-height: 24px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+.sns-join{
+    margin: 0 auto;
+    display: flex;
+    gap: 4px;
+    width: 90%;
+}
+.sns-join li{
+    width: 33.333%;
+}
+.sns-join li a{
+    display: block;
+    line-height: 24px;
+    border-radius: 6px;
+    color: #fff;
+}
+.naver{
+    background-color: #19ce60;
+}
+.google{
+    background-color: #dd4b39;
+}
+.facebook{
+    background-color: #3b5998;
+}

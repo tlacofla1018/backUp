@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,dl,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#tab{
+    width: 60vh;
+    margin: 10vh auto 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#tab > li{
+    width: 50%;
+    border-right: solid 1px #000;
+}
+#tab > li:last-child{
+    border-right: 0;
+}
+#tab > li input{
+    display: none;
+}
+#tab li label{}
+#tab li div{}
+#tab li div p{}

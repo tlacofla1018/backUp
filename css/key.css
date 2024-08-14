@@ -1,0 +1,59 @@
+.any{
+    font-size: 3em;
+
+    /* animation-name: fadeInOut; */
+    /* 애니메이션의 이름을 정의합니다 */
+
+    /* animation-duration: 1s; */
+    /* duration은 transition과 같음 */
+    /* 한 사이틀의 애니메이션이 얼마에 걸쳐 일어날지 지정합니다 */
+
+    /* animation-delay: 3s; */
+    /* 언제 애니메이션이 시작될지 지정합니다 */
+
+    /* animation-direction: alternate; */
+    /* 애니메이션이 종료되고 다시 처음부터 시작할지 역방향으로 진행할지 지정합니다 */
+    /* normal은 기본값, 재생이 끝나면 처음부터 다시 재생 */
+    /* reverse은 역방향으로 재생 */
+    /* alternate는 순방향<->역방향 번갈아가며 재생 */
+
+    /* alternate-reverse는 역방향<->순방향 번갈아가며 재생 */
+    /* animation-iteration-count: infinite; */
+    /* 애니메이션이 몇 번 반복될지 지정합니다 */
+    /* animation-play-state: running; paused는 멈춤 */
+    /* 애니메이션을 멈추거나 다시 시작할 수 있습니다. */
+    /* running이 기본값이니까 생략 가능함 */
+    /* animation-timing-function: ease-in-out; */
+    /* 중간 상태들의 전환을 어떤 시간간격으로 진행할지 지정 */
+    /* animation-fill-mode: both; */
+    /* 애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정 */
+    animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+    /*animation: name | duration | timing-function | delay | iteration-count | direction | fill-mode | play-state*/
+}
+/* none이라는 네임은 재생안함 */
+/* 네이밍 규칙은 동일하게 적용됨 */
+/* 숫자 또는 특수문자 시작 불가 */
+/* 한글, 여백 안됨 */
+/* 특수문자는 -(하이픈), _(언더스코어)만 가능 */
+@keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* 키프레임은 1~100%까지 세부적으로 다 조절 가능 */
+/* 0%는 from, 100%는 to와 같아서 둘 중 어떻게 써도 적용됨 */
+/* @keyframes는 애니메이션을 세팅하는 애 */
+/* @-webkit-keyframes */
+/* @-moz-keyframes 파이어픽스 */
+/* @-o-keyframes */
+
+/* 브라우저속성보다 표준속성이 우선시되어야 하니까 밑에 작성 */
+/* 인터프리터 언어라 가장 마지막에 읽힌게 남기 때문 */
+/* 자바스크립트의 경우는 좀 다름 */
+/* 태그가 준비가 덜 됐는데 실행시키려 하면 안 먹는 경우가 발생하기 때문에 안전빵으로 밑에 작성함 */
+
+/* Vendor prefix 벤더 프리픽스: 각 브라우저에서 판독이 가능한 접두어를 붙여서 해당 브라우저가 인식할 수 있게 하는 것 */
+/* Cross browsing 크로스 브라우징: 최대한 많은 종류의 웹브라우저에서 정상적으로 작동하는 웹페이지를 만드는 방법  */

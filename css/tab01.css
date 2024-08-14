@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+dl,ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#tab{
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+#tab > li{
+    width: 50%;
+}
+#tab > li input{
+    display: none;
+}
+#tab > li label{
+    display: block;
+    background-color: #fff;
+    line-height: 2;
+    color: #333;
+}
+#tab > li:last-child label{
+    border-right: 0;
+}
+#tab .ab-box{
+    border: solid 1px #333;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    height: 20vw;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#tab .ab-box p{}
+#tab > li input:checked ~.ab-box{
+    z-index: 99;
+}
+#tab > li input:checked +label{
+    background-color: #333;
+    color: #fff;
+}

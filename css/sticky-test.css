@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    height: 300vh;
+    width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+}
+#pop-up{}
+#pop-up p{
+    line-height: 140px;
+    background-color: #FF8A00;
+    color: #fff;
+}
+#container .header{
+    position: sticky;
+    top: 0;
+}
+#container .header p{
+    line-height: 100px;
+    background-color: #178325;
+    color: #fff;
+    display: inline-block;
+}
+.transform{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ffff00;
+    transition: all 1s linear;
+    /* transform-origin: 0 0; (왼쪽 상단기준) */
+    /* transform-origin: left top; */
+    /* transform-origin: 100% 100%; (오른쪽 하단기준) */
+    /* transform-origin: right bottom; */
+    transform-origin: center; (center는 기본값)
+}
+#container .header p:hover + .transform{
+    /* transform: scale(2); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(2); */
+    /* transform: translate(30px, 50px); */
+    /* x로는 30만큼, y로는 50만큼 */
+    /* transform: translateX(50px); */
+    /* transform: translateY(10px); */
+    /* transform: rotate(720deg); */
+    /* transform: skew(10deg, 50deg); */
+    /* transform: skewX(45deg); */
+    /* transform: skewY(45deg); */
+    transform: translateX(100px) rotate(1200deg);
+}
+.top8tn{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    line-height: 200px;
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}

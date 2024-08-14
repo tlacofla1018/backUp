@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 복습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #tb{
+            width: 800px;
+            margin: 0 auto;
+        }
+        #tb,th,td{
+            border: solid 1px #000;
+            border-collapse: collapse;
+        }
+        #tb caption{
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <table id="tb">
+        <caption>table 태그를 복습합니다</caption>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>타이틀이 담기는 태그</th>
+                <th>볼드와 가운데 정렬이 기본값</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>데이터가 담겨지는 태그</td>
+                <td rowspan="2">아래의 td태그와 병합할거임</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>윗층에서 하나를 가져가는 바람에 여기는 td가 두개뿐이다</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><em>정상화된 tr층</em></td>
+                <td><b>3개의 칸으로 정상화 되었음</b></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" height="500" align="center" valign="middle">
+                    옆으로 td 3개를 모두 병합<br>
+                    수직, 수평정렬, 너비, 높이 옵션을 스스로 갖고 있음. 속성이 무시되는 상황이 발생하기도 함<br>
+                    tr(층) 높이가 10이고, td 높이가 50이면 자식태그의 옵션을 준수하고, 부모태그의 옵션스타일을 무시함.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
