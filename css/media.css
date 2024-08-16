@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+.list{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* 넘치면 다음 줄로 넘길게 */
+    /* nowrap이면 한 줄에서 처리할게 */
+}
+.list li{
+    width: 25%;
+    height: 300px;
+    background-color: #ffff00;
+    margin-bottom: 1%;
+    font-size: 2rem;
+}
+.list li:nth-child(odd){
+    background-color: #770caa;
+}
+/* nth-child(odd) 홀수 */
+/* nth-child(even) 짝수 */
+@media screen and (max-width : 1279px){
+    .list li{
+        width: 33.333%;
+    }
+}
+/* 최대너비가 1279px 이하일 때~(1279 포함) */
+/* pc를 먼저 작업하면 max, 모바일 먼저 작업하면 min으로 잡는 경향이 강함 */
+/* 중간 분기점을 브레이크포인트라고 함 */
+/* 브레이크 포인트는 이렇게 잡으면 안되고 부트스트랩으로 작업해야 함 */
+@media screen and (max-width : 767px){
+    .list li{
+        width: 50%;
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width : 375px){
+    .list{
+        display: block;
+    }
+    .list li{
+        width: 100%;
+        font-size: 1.6rem;
+    }
+}
+/* 반응형으로 만들면 관리를 한 번만 하면 됨 */
+/* m.적응형으로 만들면 페이지를 모바일용 pc용 둘 다 관리해야 함 */
+/* 초반부터 생각을 잘 해놔야 반응형이 빨리 끝남 */
