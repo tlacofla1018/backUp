@@ -19,8 +19,6 @@ a{
     height: 100px;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 2px #333;
-    box-sizing: border-box;
 }
 #header h1{}
 #header h1 a{
@@ -47,10 +45,11 @@ a{
 #header .depth01 > li > a{
     display: block;
     line-height: 70px;
+    background-color: #ffffdb;
 }
 
 #header .depth02{
-    background-color: #fff;
+    background-color: #ffffdb;
     position: absolute;
     top: 100%;
     left: 0;
@@ -64,27 +63,14 @@ a{
 #header .depth02 li a{
     line-height: 50px;
     display: block;
-    border-bottom: solid 1px #ccc;
-}
-#header .depth02 li:first-child a{
-    border-top: solid 2px #333;
-}
-#header .depth02 li:last-child a{
-    border-bottom: solid 2px #333;
-}
-#header .depth01 > li:first-child .depth02{
-    border-left: solid 2px #333;
-}
-#header .depth01 > li:last-child .depth02{
-    border-right: solid 2px #333;
 }
 
 #header .depth01:hover .depth02{
-    height: 207px;
+    height: 200px;
 }
 #header .depth01 > li:hover > a,
 #header .depth02 li:hover a{
-    background-color: #333;
+    background-color: #625a54;
     color: #fff;
 }
 
@@ -98,3 +84,188 @@ a{
 #mainBanner ul li{}
 #mainBanner ul li a{}
 #mainBanner ul li a img{}
+
+/* --------------------------------------- */
+#content{}
+#content > ul{
+    display: flex;
+}
+#content > ul > li{
+    width: 33.333%;
+}
+
+#content .tabBox{}
+#content .tabBox > ul{
+    display: flex;
+    position: relative;
+}
+#content .tabBox > ul > li{}
+#content .tabBox > ul > li input{
+    display: none;
+}
+#content .tabBox > ul > li label{
+    display: block;
+    line-height: 50px;
+    background-color: #625a54;
+    color: #fff;
+    padding: 0 20px;
+}
+#content .abBox{
+    height: 150px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffdb;
+    z-index: 1;
+}
+
+#content .notice{}
+#content .notice dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#content .notice dl dt{}
+#content .notice dl dt a{}
+#content .notice dl dd{}
+#content .notice dl dd a{}
+#content .notice .abBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+#content .gallery ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#content .gallery ul li{}
+#content .gallery ul li a{}
+#content .gallery .abBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content .tabBox > ul > li input:checked ~ .abBox{
+    z-index: 99;
+}
+#content .tabBox > ul > li input:checked ~ label{
+    background-color: #ffffdb;
+    color: #333;
+}
+
+#content .middleBanner{}
+#content .middleBanner a{
+    display: block;
+    height: 200px;
+    background: url(../images/banner.jpg) no-repeat center / cover;
+}
+
+#content .direct{
+    height: 200px;
+    background: url(../images/direct.jpg) no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content .direct button{
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    border: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ------------------------- */
+#footer{}
+#footer > ul{
+    display: flex;
+    height: 100px;
+
+}
+#footer > ul > li{}
+#footer .bottomLogo{
+    width: 20%;
+}
+#footer .bottomLogo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#footer .bottomLogo a img{
+    display: block;
+    filter: grayscale(100%);
+    /* 흑백필터임 */
+}
+#footer .copy{
+    width: 60%;
+    
+}
+#footer .copy p{
+    line-height: 100px;
+    text-align: center;
+}
+#footer .snsIcon{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .snsList{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#footer .snsList li{}
+#footer .snsList li a{
+    display: block;
+}
+#footer .snsList li a img{
+    display: block;
+    border-radius: 20%;
+}
+
+#popupBox{
+    position: fixed;
+    height: 300px;
+    width: 600px;
+    background-color: #fff;
+    border: solid 1px #333;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    z-index: 999;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 40px;
+    display: none;
+}
+#closeBtn{
+    position: absolute;
+    padding: 10px 20px;
+    top: 5%;
+    right: 5%;
+    background-color: #fff;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: #ccc 0 0 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#popupBox h3{
+    margin: 40px 0;
+}
+#popupBox p{}
+.show{
+    display: block !important;
+}
