@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본내장함수</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트는 프로그래밍 언어임
+        // 명령을 내리고픈 대상에 자바스크립트 명령을 전달하면 [ 입력 > 처리 > 출력 ] 순서대로 작업이 이루어짐
+        // 자바스크립트 명령문으로 지시를 주던 받던 하는 어떤 대상을 통칭 [객체]라고 함
+        // 입력: 객체에게 수행 명령을 전달
+        // 처리: 객체가 주어진 작업을 수행
+        // 출력: 객체가 작업을 수행한 결과를 사용자에게 반환
+
+        document.write('Hellow World! <br>');
+        // 문서에 Hellow World! <Enter> 를 써라
+
+        // 세미클론을 빼먹어도 실행시켜주니 제발 속지마셈
+        // 브라우저마다 다르니 되도록 세미클론을 꼭 써야함
+
+        document.write("\"자바스크립트\"는 대소문자 분간을 해야 합니다. <br>");
+        //노출시킬 홑따옴표 또는 쌍따옴표는 역슬래쉬 뒤에 씀 \' \"
+
+        document.write("'자바스크립트'는 대소문자 분간을 해야 합니다. <br>");
+        //겹치지 않으면 그냥 써도 되니 되도록 
+
+        // 이건 한줄 주석처리
+        /* 요건 여러 줄을
+            동시에 주석처리 할 수 있음 */
+
+        // window.alert('처음부터 다시 작성해주세요');
+        // window라는 객체에게(웹브라우저) alert이라는 기능을 수행하게 함
+        // 한줄당 명령 하나씩 쓰는게 관습
+        // 가장 기본적인 출력방식
+        // 윈도우의 내장함수임
+
+        console.log('hello?');
+        // 는 window.console.log('hello?');랑 같음
+        // 윈도우는 생략 가능
+        // 웹유효성 검사하듯 콘솔에 어디 오류났다고 뜨니까 요소검사에서 콘솔도 자주 들여다 봐야 함
+
+        // 변수선언 키워드: var 바 / let 렛 / const 컨스트
+        // 변수를 선언하다 > 빈 박스를 어디서 주워왔다
+        // 변수에 이름을 지정하다 > 박스에 이름표를 붙여줬다
+        // 변수에 데이터를 담았다 > 박스에 물건을 집어 넣었다
+
+        let input = confirm('회원가입 할래?');
+        // confirm은 유저의 의사를 예 또는 아니오(확인/취소)로 입력받을 수 있음
+        // 값을 반환받음(return)
+        // 값을 참(true) 또는 거짓(false)으로 반환받음
+        // 반환받을 값을 저장하기 위해서는 미리 저장할 준비(변수세팅)를 해두어야 함
+        // 확인이나 취소를 눌렀을 때 반환받은 값을 input이라는 박스에 넣어줘
+        // confirm('회원가입 할래?');는 반환받은 값이 공중에서 휘발됨
+        var people = {
+                name : 'Jhon doe',
+                age : 23,
+                gender : 'man'
+            }
+        const numberSet = [12,20,60,40,28];
+        // 나 변수 선언할 건데 그 변수 이름은 input이라 할 거야 (이름 지정은 자유)
+
+        console.log(input);
+        // 인풋에 담은 반환받은 값을 확인하고 싶으니 콘솔에 뿌려줘
+        // 변수명을 입력할 때는 따옴표 안씀
+        // 반환받은 값이 true라면 A페이지로, false라면 B페이지로 보내줘 라고 사용할 수 있음
+        console.log(people);
+        console.log(numberSet);
+        // 여러가지 타입의 자료가 존재하며 이를 자료형이라고 함
+
+        let firstName = prompt('성을 입력하세요');
+        let lastName = prompt('이름을 입력하세요');
+        console.log(firstName);
+        console.log(lastName);
+        console.log(firstName + lastName);
+        // 변수는 연산이 가능함
+        // 문자 변수의 연산은 연결지어 내보내는 것
+        // prompt 함수는 입력받는 기본 자료형이 문자열이기 때문에 1+2는 12로 노출된다
+    </script>
+</body>
+</html>
