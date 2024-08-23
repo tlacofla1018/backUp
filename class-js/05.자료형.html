@@ -14,7 +14,7 @@
 
             // 문자열 (String)
             // 숫자 (Number)
-            // 불린(불값) (Boolean) [true, false]
+            // 불리언(불린, 불) (Boolean) [true, false]값 중 하나
             // 배열 (Array)
             // 객체 (Object)
             // 함수 (Function)
@@ -26,6 +26,7 @@
                 // 변수가 의도적으로 '값이 없음'을 나타내도록 설정된 상태
                 // (변수를 명시작으로 비워두고 싶을 때 사용하는 값)
                 // (프로그래머가 변수에 의도적으로 '값이 없음'을 할당할 때 자주 사용)
+                // 변수가 있긴 하지만 의도적으로 값이 없음(empty)
             // 미정의 (undefined)
                 // 변수가 선언되었지만, 아직 값이 할당되지 않은 상태
                 // (변수 선언 후에 초기화 하지 않으면 기본적으로 undefined 값이 할당됨)
@@ -44,15 +45,16 @@
                 console.log(string2);
                 // 기호를 사용하여 데이터를 만드는 방식을 리터럴이라고 함
                 // ``(백틱) > 템플릿 리터럴
+                // 변수를 부를 때 사용하는 ${} 기호를 placeholder라고 함
+                // 자바스크립트(애크마스크립트) es6 이전에는 +를 사용해야 했지만 현재는 플레이스홀더를 사용함
             // 02. 숫자 (Number)
                 const number = -123; // 양수, 음수를 모두 취급한다
-                const pi = 3.14; // 앞에 숫자가 0일 때는 .14 생략가능
+                const pi = 3.14; // 앞에 숫자가 0일 때는 .14로 0 생략가능
                 console.log(number + 1);
                 // 초기값으로 데이터 타입을 판단
                 // 변수(사칙연산+-*/)숫자 = 가능하다
                 console.log(number + undefined); // NaN == Not a Number
                 // NaN은 데이터의 타입은 숫자인데 숫자로 표기할 수 없는 값을 뜻함
-
                 // 부동소수점 오류: 소수점 계산을 마냥 믿으면 안됨
                     // 흔히 우리가 사용하는 숫자는 10진수이나 컴퓨터는 2진수임
                     // 10진수를 2진수로 변환하여 계산, 다시 10진수로 변환하여 보여줌
@@ -69,6 +71,134 @@
                     console.log(Number(a + b).toFixed(1));
                     // 소수점 한자리까지 자르지만, 이번 연산시 자료형을 숫자로 변환함
                     // 다음 호출시, 계속 숫자형이냐? == No.
+            //03. 불리언(불린, 불) (Boolean)
+                // true, false 값 밖에 없음
+                const boolT = true;
+                const boolF = false;
+                // if(조건){
+                //     console.log('Hello World!');
+                // }
+                if(boolT){
+                    console.log('Hello World!'); // 실행됨
+                }
+                if(boolF){
+                    console.log('Hello World!'); // 실행안됨
+                }
+
+        // 참조형:
+        // 객체, 배열, 함수와 같은 복합적인 데이터 구조를 포함
+        // 값을 직접 저장하는 것이 아니라 메모리 상의 '참조'를 통해 데이터를 다룸
+        // 즉, 변수에는 실제 데이터가 있는 '메모리의 주소'를 저장함
+        // (어딘지는 모르지만 저장된 메모리의 '주소값'이 변수에 저장됨)
+        // 참조형과 원시형의 차이
+        let str1 = 'hi?';
+        let str2 = str1;
+
+        str2 = 'hello!';
+
+        console.log(str1);
+        console.log(str2);
+
+        let originalArray = [1,2,3];
+        let newArray = originalArray;
+
+        newArray[3] = 4;
+
+        console.log(originalArray);
+        console.log(newArray);
+        // 자바스크립트는 항상 0번부터 시작한다
+        // [1,2,3]이면 0번~2번까지 있는 것
+            // 01. 배열 (Array)
+                // new 키워드는 생성자 함수
+                // 생성자 함수를 통한 Array 선언
+                // const car = new Array('KIA','VOLVO','HYUNDAI');
+                // 리터럴 방식(기호를 사용하여 데이터 생성)으로 쓰면 아래와 같음
+                const car = ['KIA','VOLVO','HYUNDAI'];
+                // 'KIA','VOLVO','HYUNDAI'를 배열의 아이템, 배열의 요소, array의 element라고 부름
+                console.log(car);
+                // 0 1 2 순으로 들어가 있는 것을 확인할 수 있음
+                // length(배열의 길이)라는 속성이 있는 것을 볼 수 있음
+                // 몇개의 배열요소가 들어있는지 확인할 수 있음
+                console.log(car.length); // car의 배열의 길이를 알려줘
+                console.log(car[2]); // car의 2번째 아이템을 알려줘 대괄호[]로 접근함
+                // 이렇게 순서로 조회하는 행위를 인덱싱이라고 함
+                // 그 순번은 인덱스라고 함
+                console.log(car[car.length-1]); // 몇개가 있는지는 모르겠지만 마지막 아이템을 조회해야 할 때
+            // 02. 객체 (Object)
+                const user1 = {
+                    name : 'Kim',
+                    age : 40,
+                    gender : 'man'
+                }
+                // 키(key), 밸류(value)로 구성되어 있음
+                // 앞에 오는 게 key(property), 뒤에 오는 게 value(값이라 함)
+                console.log(user1);
+                // 순서라는 개념 자체가 없음
+                // name을 먼저 넣었다고 네임이 먼저 나오지 않음
+                console.log(user1.name);
+                console.log(user1['age']);
+                const user2 = {
+                    name : 'Lee',
+                    age : 20,
+                    parent : user1
+                }
+                console.log(user2);
+                // 예제. user2로 접근해서 Kim 부르기
+                    console.log(user2.parent.name);
+                    console.log(user2['parent']['name']);
+                    console.log(user2.parent['name']); // 어지간하면 혼용 금지
+                // 예제. users로 접근해서 Lee 부르기
+                    const users = [user1,user2];
+                    console.log(users[1]['name']);
+                    console.log(users[users.length-1]['name']);
+                    console.log(users[1].name);
+            // 03. 함수 (Function)
+                function add(){
+                    console.log('Hello World!');
+                }
+                // 함수 호출은 함수이름();
+                add(); // 함수 호출하면 실행문이 실행됨
+                console.log(add); // 함수 자체를 가져오면 함수를 그대로 뱉음
+                function getNumber(){
+                    return 1234; // 1234라는 숫자를 반환해라
+                }
+                console.log(getNumber()); // 리턴해주는 값 1234 나옴
+                console.log(typeof getNumber); // 타입이 function
+                console.log(typeof getNumber()); // 타입이 number
+                // [주의] 완전히 다른 값이 출력됨
+                function hello(name){ // 여기서의 () 안에는 매개변수, 파라미터(Parameters)가 들어감
+                    console.log(`hello ${name}`);
+                }
+                hello('심채림'); // 함수 호출시 ()안에는 인자, 아규먼츠(Arguments)
+                // 타고 들어가는 것이기 때문에 어떤 데이터든 값만 명확하면 됨
+                hello(users[1].parent.name);
+
+                // 번외) Truthy, Faslsy, 참과 거짓
+                if(345){
+                    console.log('참');
+                }
+                if(0){
+                    console.log('거짓');
+                }
+
+                // 거짓값을 알아내는 방법
+                if(0){
+                    console.log('참');
+                }else{
+                    console.log('거짓');
+                }
+                // if문은 참일 때만 실행됨
+                // 거짓(false)값: 0, 빈 문자열 '', null, false, undefined, NaN, -0, 0n(빅인트)
+                // 참(true)값: 거짓값에 해당하는 데이터를 제외한 모든 것들이 참
+                const firstName = ['Kim', 'Lee', 'Park'];
+                if(firstName){
+                    console.log('참이라고 하네요');
+                }
+                const firstName = [];
+                if(firstName.length){
+                    console.log('참이라고 하네요');
+                }
+                // length가 0 == 거짓 == 실행안됨
     </script>
 </body>
 </html>

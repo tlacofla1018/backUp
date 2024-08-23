@@ -13,12 +13,14 @@
         // 입력: 객체에게 수행 명령을 전달
         // 처리: 객체가 주어진 작업을 수행
         // 출력: 객체가 작업을 수행한 결과를 사용자에게 반환
+        // 반환: 입력받은 값을 반환함
 
         document.write('Hellow World! <br>');
         // 문서에 Hellow World! <Enter> 를 써라
 
         // 세미클론을 빼먹어도 실행시켜주니 제발 속지마셈
         // 브라우저마다 다르니 되도록 세미클론을 꼭 써야함
+        // 어느 순간 에러남
 
         document.write("\"자바스크립트\"는 대소문자 분간을 해야 합니다. <br>");
         //노출시킬 홑따옴표 또는 쌍따옴표는 역슬래쉬 뒤에 씀 \' \"
@@ -47,6 +49,7 @@
         // 변수에 데이터를 담았다 > 박스에 물건을 집어 넣었다
 
         let input = confirm('회원가입 할래?');
+        // confirm 함수 앞에는 window가 생략되어 있음
         // confirm은 유저의 의사를 예 또는 아니오(확인/취소)로 입력받을 수 있음
         // 값을 반환받음(return)
         // 값을 참(true) 또는 거짓(false)으로 반환받음
@@ -69,11 +72,11 @@
         console.log(numberSet);
         // 여러가지 타입의 자료가 존재하며 이를 자료형이라고 함
 
-        let firstName = prompt('성을 입력하세요');
-        let lastName = prompt('이름을 입력하세요');
+        let lastName = prompt('성을 입력하세요');
+        let firstName = prompt('이름을 입력하세요');
         console.log(firstName);
         console.log(lastName);
-        console.log(firstName + lastName);
+        console.log(lastName + firstName);
         // 변수는 연산이 가능함
         // 문자 변수의 연산은 연결지어 내보내는 것
         // prompt 함수는 입력받는 기본 자료형이 문자열이기 때문에 1+2는 12로 노출된다

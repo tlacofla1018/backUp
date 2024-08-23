@@ -17,8 +17,8 @@
         // 이를 변수 호이스팅이라 함
 
         console.log(num); // undefined(정의되지 않은 값) 출력
-        var num = 40; // 여기서 변수 선언문은 var num
-        // 위 내용은 아래와 같은 상황임
+        var num = 40; // 여기서 변수 선언부는 var num
+        // 위 내용은 아래와 같은 상황임 (호이스팅 때문에 선언부가 위로 올라온 것과 마찬가지)
         // var num;
         // console.log(num);
         // 원래라면 에러가 떠야 하지만 변수 호이스팅으로 인해 undefined가 출력됨
@@ -43,7 +43,7 @@
         var int = 2; // 변수 재선언
         console.log(int);
 
-        int = 4; // 재할당
+        int = 4; // 재할당(변수를 선언해서 값을 바꿔치기 하는 것)
         console.log(int);
 
         let num = 10;

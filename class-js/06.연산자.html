@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        // 산술연산자
+            // let num1 = 15;
+            // let num2 =2;
+            // let result;
+            // result = num1 + num2;
+            // console.log(result); // 17 (덧셈)
+            // result = num1 - num2;
+            // console.log(result); // 13 (뺄셈)
+            // result = num1 * num2;
+            // console.log(result); // 30 (곱셈)
+            // result = num1 ** num2;
+            // console.log(result); // 225 (제곱, num1의 num2승)
+            // result = num1 / num2;
+            // console.log(result); // 7.5 (나눗셈)
+            // result = num1 % num2;
+            // console.log(result); // 1 (나눗셈의 나머지)
+            // 또는
+            console.log(1 + 2);
+            console.log(5 - 7);
+            console.log(3 * 4);
+            console.log(2 ** 5);
+            console.log(10 / 2);
+            console.log(7 % 5);
+            // 사용하는 기호를 연산자라고 함
+            // 연산자 좌우에 있는 값을 피연산자라고 함
+            // 연산자는 기호, 피연산자는 데이터임
+            // 문자연산
+                const str1 = '기차가 어둠을 헤치고';
+                const str2 = '은하수를 건너면';
+                const num3 = 8282;
+                const str3 = '갑시다?';
+                console.log(str1 + str2 + num3 + str3);
+                // 문자 + 문자 + 숫자 + 문자
+                // 결합할 때 자동으로 데이터타입(용량)이 큰 쪽(string)으로 전환됩니다
+                // 문자의 형태마다 용량이 다름
+
+        // 대입연산자
+            let num01 = 10;
+            let num02 = 3;
+            num01 += num02; // num01 = num01 + num02
+            // num01과 num02를 더한 값을 num01에 대입해줘
+            console.log(num01);
+            num01 -= num02; // num01 = num01 - num02
+            // num01과 num02를 뺀 값을 num01에 대입해줘
+            console.log(num01);
+            num01 *= num02; // num01 = num01 * num02
+            // num01과 num02를 곱한 값을 num01에 대입해줘
+            console.log(num01);
+            num01 /= num02; // num01 = num01 / num02
+            // num01과 num02를 나눈 값을 num01에 대입해줘
+            console.log(num01);
+            num01 %= num02; // num01 = num01 % num02
+            // num01과 num02를 나머지 값을 num01에 대입해줘
+            console.log(num01);
+
+        // 비교연산자
+            // 비교연산자는 언제나 불리언 데이터를 반환함
+            const A = 1;
+            const B = 3;
+            console.log('01', A > B); // false
+            console.log('02', A < B); // true
+            console.log('03', A >= B); // false
+            console.log('04', A <= B); // true
+            console.log('05', A == B); // false (데이터의 타입을 따지지 않음)
+            console.log('06', A != B); // true (데이터의 타입을 따지지 않음)
+            // 자바스크립트의 부정형은 !
+            console.log('07', A === B); // false (데이터의 타입까지 비교함)
+            console.log('07', A !== B); // true (데이터의 타입까지 비교함)
+            // 주의사항
+                const int = 0;
+                const bool = false;
+                console.log(int == bool); // true
+                console.log(int === bool); // false
+                // 되도록 비교연산자를 활용할 때는 엄격한 비교로 사용해야 함
+
+        // 논리연산자
+            const C = 1;
+            const D = 1;
+            console.log((C >= D) || (C == D)); // true '||(또는)''
+                // C가 D보다 크거나 같다 or C가 D와 같다
+                // 둘 중 값이 하나라도 true면 true 값을 반환함
+            console.log((C > D) && (C == D)); // false '&&(그리고)''
+                // C가 D보다 크다 and C와 D가 같다
+                // 둘 중 하나라도 false값이 존재하면 false값을 반환함
+            console.log(!(C == D)); //false
+                // not연산자(부정연산자) 늘 반대값을 반환함
+            console.log('(1)', false || true || false);
+                // OR연산자는 true를 만나는 순간 뒤까지 안감
+                // 값이 맞으면 종료시켜버림
+                // OR과 AND가 같이 있으면 꼭 OR을 먼저 계산함
+            console.log('(2)', true && '');
+                // AND는 앞의 조건이 참이라면 AND 뒤의 값을 반환함
+                // 이 상황에선 빈 값('')을 내보내버림
+            console.log('(3)', true && false && true); // false
+                // 중간에 false값이 들어와서 망해버린 식
+                // 앞에 조건들이 전부 다 true여야만 맨 뒤의 식을 내보내줌
+                // 맨뒤의 식 조차도 true여야 함
+            console.log('(4)', false || 'Iron Man'); // Iron Man
+                // 거짓값이 아닌 모든 것은 참
+                // true값을 만났기 때문에 뱉은 것
+            console.log('(5)', 0 && 'Iron Man'); // 0
+                // 0을 뱉었다는 건 0을 false값으로 인식했다는 것
+                // false를 의미하는 0을 뱉은거임
+            console.log('(6)', 'Iron Man' || 'batman'); // 'Iron Man'
+                // OR연산자는 true를 만나면 뒤에 식까지 체크를 안함
+            console.log('(7)', !false); // true
+                // NOT연산자, 무조건 반대값을 내뱉음
+            console.log('(8)', !(90 > 40)); // false
+                // 90은 40보다 크기 때문에 true, 반대값인 false를 뱉음
+            console.log('(9)', !(90 < 40 && 40 < 90)); // true
+                // !(false && true) > !false > true
+            
+        // 삼항연산자
+            let age = parseInt(prompt('당신의 나이는?')); // 숫자로 반환받게 됨
+            let setAge = 30;
+            // let result = age > setAge ? "음.. 나이 때문에 고민이 많으시겠군요" : "오! 아직 젊으시군요";
+            let result = age > setAge ? alert("음.. 나이 때문에 고민이 많으시겠군요") : alert("오! 아직 젊으시군요");
+            console.log(result);
+            // 물음표 앞의 값이 참이면 첫번째 문장, 거짓이면 두번째 문장을 뱉음
+
+            // 예제
+            // BMI( 적정몸무게 구하기), 구하는공식 bmi = (키 - 100) * 0.9
+            // 유저에게 키와 몸무게를 입력받아
+            // 유저의 몸무게가 적정 몸무게 보다 이상일 경우
+            // '살 좀 빼세요...' 라고 알림창 띄우기
+            // 미만일 경우 '살 좀 찌세요...' 라고 알림창 띄우기
+            // *묵시적 타입 변환 : 자바스크립트는 특정 타입의 값을 기대하는곳에 
+            // 다른 타입의 값이 들어오면 자동으로 타입을 변환해서 사용함.
+                // 풀이
+                let userHeight = prompt('신장을 입력하세요');
+                let userWeight = prompt('체중을 입력하세요');
+                let bmi = ((userHeight - 100) * 0.9);
+                let resultBMI = bmi > userWeight ? alert("살 좀 찌세요...") : alert("살 좀 빼세요...");
+                console.log(resultBMI);
+                // 정답예시
+                const userHeight = prompt('당신의 키는?', 170);
+                const userWeight = prompt('당신의 몸무게는?', 70);
+                const BMI = (userHeight - 100) * 0.9; // 이 순간만 묵시적 타입 변환
+                const resultBMI = userWeight > BMI ? '살 좀 빼세요...' :'살 좀 찌세요...';
+                alert(resultBMI);
+                    // if문 추가
+                    if(resultBMI === '살 좀 빼세요...'){
+                        document.write('더 먹을건데?');
+                    }else{
+                        document.write('보태준거 있냐...?');
+                    }
+
+    </script>
+</body>
+</html>
