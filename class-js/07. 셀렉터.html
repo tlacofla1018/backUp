@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p id="test"><a href="">첫번째 p 태그</a></p>
+        <p class="test">두번째 p 태그</p>
+        <p class="test">세번째 p 태그</p>
+    
+        <div id="container"></div>
+        
+        <script>
+            // $('p'); -> 모든 p 태그를 들고옴
+            // document.querySelector('#test')
+            // document.querySelector('.test');
+            const tagP = document.querySelector('p');
+            console.log(tagP);
+            // 일치하는 요소중 첫번째 요소를 반환
+            // 일치하는 요소가 없다? null(변수가 있긴 있는데 비어있음)을 반환.
+            console.log(tagP.textContent);
+            // textContent -> 메서드 -> 텍스트를 들고옴. 태그는 안다룸.
+            // 일치하는 요소 중 첫번째 요소의 텍스트요소를 반환함
+            console.log(tagP.innerHTML); 
+            // innerHTML -> 태그까지 다룸.
+            // 단순히 텍스트만 다룰땐 textContent를 쓰는게 좋음.
+    
+            // tagP.textContent = '텍스트 바꿔치기'; -> 태그 취급 안함, 내부에 있는 태그 날아감
+            // tagP.innerHTML = '<a href="#">텍스트 바꿔치기</a>';
+    
+            const divTag = document.getElementsByClassName('test');
+            console.log(divTag);
+    
+            // const box = document.createElement('div'); 
+            // console.log(box); // 간직하고 있는 중임.
+            // createElement -> 지정된 이름의 HTML 요소를 만들어서 반환.
+            // 만들어지고 반환되었다고 해서 바로 웹 브라우저에 추가되냐??
+            // 화면에 뿌려주는 작업을 해야함.
+    
+            box.style.color = '#ff0000';
+            box.style.width = '200px';
+            box.style.height = '200px';
+            box.textContent = '컨텐츠 들어간다~';
+            divTag.appendChild(box); // 선택한 노드의 마지막 자식 노드로 추가
+    
+            document.querySelector(x); // css 선택자 x를 기반으로 첫번째 요소를 선택.
+            document.querySelectorAll(x); // css 선택자 x를 기반으로 여러 요소를 선택.
+            // 배열 형태로 들고옴.
+            document.getElementById(x); // id의 속성값을 기반으로 요소 선택.
+            document.getElementsByClassName(x) // class 속성값 기반으로 여러요소 선택.
+            // 배열로 가져옴.
+        </script>
+</body>
+</html>

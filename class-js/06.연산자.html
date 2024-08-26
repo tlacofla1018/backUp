@@ -35,9 +35,9 @@
             // 연산자는 기호, 피연산자는 데이터임
             // 문자연산
                 const str1 = '기차가 어둠을 헤치고';
-                const str2 = '은하수를 건너면';
+                const str2 = ' 은하수를 건너면 ';
                 const num3 = 8282;
-                const str3 = '갑시다?';
+                const str3 = ' 갑시다?';
                 console.log(str1 + str2 + num3 + str3);
                 // 문자 + 문자 + 숫자 + 문자
                 // 결합할 때 자동으로 데이터타입(용량)이 큰 쪽(string)으로 전환됩니다
@@ -61,6 +61,8 @@
             num01 %= num02; // num01 = num01 % num02
             // num01과 num02를 나머지 값을 num01에 대입해줘
             console.log(num01);
+            num01 **= num02;
+            console.log('99', num01);
 
         // 비교연산자
             // 비교연산자는 언제나 불리언 데이터를 반환함
@@ -141,18 +143,18 @@
                 let bmi = ((userHeight - 100) * 0.9);
                 let resultBMI = bmi > userWeight ? alert("살 좀 찌세요...") : alert("살 좀 빼세요...");
                 console.log(resultBMI);
-                // 정답예시
-                const userHeight = prompt('당신의 키는?', 170);
-                const userWeight = prompt('당신의 몸무게는?', 70);
-                const BMI = (userHeight - 100) * 0.9; // 이 순간만 묵시적 타입 변환
-                const resultBMI = userWeight > BMI ? '살 좀 빼세요...' :'살 좀 찌세요...';
-                alert(resultBMI);
-                    // if문 추가
-                    if(resultBMI === '살 좀 빼세요...'){
-                        document.write('더 먹을건데?');
-                    }else{
-                        document.write('보태준거 있냐...?');
-                    }
+                // // 정답예시
+                // const userHeight = prompt('당신의 키는?', 170);
+                // const userWeight = prompt('당신의 몸무게는?', 70);
+                // const BMI = (userHeight - 100) * 0.9; // 이 순간만 묵시적 타입 변환
+                // const resultBMI = userWeight > BMI ? '살 좀 빼세요...' :'살 좀 찌세요...';
+                // alert(resultBMI);
+                //     // if문 추가
+                //     if(resultBMI === '살 좀 빼세요...'){
+                //         document.write('더 먹을건데?');
+                //     }else{
+                //         document.write('보태준거 있냐...?');
+                //     }
 
     </script>
 </body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggleBg{
+            width: 40px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: #ccc;
+            position: relative;
+        }
+        #toggleBtn{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #333;
+            top: 0;
+            left: 0;
+            transition: all .2s linear;
+        }
+        .on{
+            background-color: #ff0000 !important;
+            left: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggleBg">
+        <span id="toggleBtn"></span>
+    </div>
+    <script>
+
+        let isOn = true;
+
+        function toggleSwitch(){
+            if(isOn === true){
+                document.querySelector('#toggleBtn').classList.add('on');
+                isOn = false;
+            }else{
+                document.querySelector('#toggleBtn').classList.remove('on');
+                isOn = true;
+            }
+        }
+        
+        document.querySelector('#toggleBtn').addEventListener('click', toggleSwitch);
+    </script>
+</body>
+</html>

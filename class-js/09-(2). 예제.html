@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const score = parseInt(prompt('점수를 입력하세요.'));
+
+        // const grade = score >= 90
+        //     ? 'A' : score >= 80
+        //         ? 'B' : score >= 70
+        //             ? 'C' : score >= 60
+        //                 ? 'D' : 'F';
+        // alert(`너의 점수는 ${score}이고, 너의 등급은 ${grade}이다.`);
+
+        // const food = ['apple', 'banana', 'cherry', 'mango'];
+        // const choice = parseInt(prompt('0 ~ 3의 숫자 중 하나를 골라 입력해주세요'));
+        // alert(`내가 고른 과일은 ${food[choice]}입니다.`);
+
+        const favorite = ['화사', '아이키', '아이언맨', '이소룡'];
+        const num = prompt('0 ~ 3까지 숫자를 골라주세요');
+        alert(`선택된 인물은 ${favorite[num]}입니다.`);
+
+        // 예제 01
+            // 유저한테 회원가입 진짜 할거냐고 물어보고 한다고 하면 알림창으로 회원가입 완료라고 띄워주세요
+            // 안한다 그러면 알림창으로 응 잘가 출력
+                // const join = confirm('회원가입 진짜 할겨?');
+                // if(join === true){
+                //     alert('회원가입완료');
+                // }else{
+                //     alert('응 잘가');
+                // }
+
+        // 예제 02
+            // 유저에게 아이디와 패스워드를 입력받아 ID가 'green'이고 PW가 '1234'일 경우에만 
+            // 관리자님 환영함
+            const userID = prompt('아이디를 입력하세요');
+            const userPW = prompt('비밀번호를 입력하세요');
+            if(userID === 'green' && userPW === '1234'){
+                alert('관리자님 환영합니다');
+            }else if(userID !== 'green' && userPW === '1234'){
+                alert('응 아니야 아이디 틀림');
+            }else if(userID === 'green' && userPW !== '1234'){
+                alert('응 아니야 비번 틀림');
+            }else{
+                alert('넌 누구냐');
+            }
+    </script>
+</body>
+</html>
