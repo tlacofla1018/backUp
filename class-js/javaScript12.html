@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. 반복문-while</title>
+</head>
+<body>
+    <script>
+        // let i = 0;
+
+        // -문을 쓸 때는 선언부터 하고 시작
+        // while(i <= 10){ // i가 10보다 작거나 같을 때까지
+        //     document.write(`${i}<br>`); // i를 반복해서 뱉을거다
+        //     i++; // i를 1씩 증가하겠다
+        // }
+        // 주의사항
+        // 조건이 변화히지 않으면 무한반복을 터뜨림
+        // 조건을 거짓(false)로 만들 수 있는 내용이 반드시 문장안에 포함되어있어야 함
+        // 초기값 받고 조건확인 > 조건부합 > 반복문실행 > 조건확인
+        // 와일문보단 포문을 자주 씀
+        
+        // 1~20 사이의 숫자 중에 짝수만 10개 출력
+        // while문 사용
+
+        let i = 0; // 10개만
+        let num = 1; // 1~10 사이의 수
+
+        while(i < 10){
+            if(num % 2 === 0 && num <= 20){
+                document.write(`${num}<br>`);
+                i++;
+            }
+            num++;
+        }
+        // 반복문에서 많이 사용되는 루틴
+    </script>
+</body>
+</html>

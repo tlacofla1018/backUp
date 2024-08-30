@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연산자</title>
+    <title>06. 연산자</title>
 </head>
 <body>
     <script>
@@ -120,13 +120,13 @@
                 // 90은 40보다 크기 때문에 true, 반대값인 false를 뱉음
             console.log('(9)', !(90 < 40 && 40 < 90)); // true
                 // !(false && true) > !false > true
-            
+
         // 삼항연산자
             let age = parseInt(prompt('당신의 나이는?')); // 숫자로 반환받게 됨
             let setAge = 30;
             // let result = age > setAge ? "음.. 나이 때문에 고민이 많으시겠군요" : "오! 아직 젊으시군요";
-            let result = age > setAge ? alert("음.. 나이 때문에 고민이 많으시겠군요") : alert("오! 아직 젊으시군요");
-            console.log(result);
+            let total = age > setAge ? alert("음.. 나이 때문에 고민이 많으시겠군요") : alert("오! 아직 젊으시군요");
+            console.log(total);
             // 물음표 앞의 값이 참이면 첫번째 문장, 거짓이면 두번째 문장을 뱉음
 
             // 예제
@@ -156,6 +156,28 @@
                 //         document.write('보태준거 있냐...?');
                 //     }
 
+        // 증감연산자
+            let int1 = 10;
+            let int2 = 20;
+            let result; // 자료형 undefined 상태
+
+            --int1; // 9, 먼저 1감소 (전치연산자 또는 전위연산자라고 부름)
+            console.log(int1); // 9
+
+            ++int1; // 10, 먼저 1증가 (전치연산자 또는 전위연산자라고 부름)
+            console.log(int1); //10
+
+            result = int2++; // 다음번에 호출할 때 1 증가 예약 (후치연산자 또는 후위연산자라고 부름)
+            console.log(result); // 20
+
+            result = int2; // 21
+            console.log(result);
+
+            result = int2--; //21
+            console.log(result);
+
+            result = --int2; //19
+            console.log(result);
     </script>
 </body>
 </html>
