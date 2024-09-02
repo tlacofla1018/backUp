@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. 반복문2 - for / for of / for in문</title>
+</head>
+<body>
+    <script>
+        // 기본
+        // ---------------
+        // for(초기식; 조건식; 반복식){
+        //     반복될 실행문;
+        // }
+        // {}는 코드블럭이라고 함
+        // ---------------
+        // for(let i = 0; i < 10; i++){
+        //     console.log(`${i}<br>`);
+        // }
+        // 초기식 > 조건식 > 실행문 > 반복식 > 조건식 > 실행문 > 반복식 ...
+        // console.log(i); 하면 i를 못 찾음
+        // 이때의 i는 for문 안에서 선언된 지역변수이기 때문임
+
+        // let i = 0;
+        // for(; i < 10; i++){
+        //     console.log(`${i}<br>`);
+        // }
+        // // 콘솔은 태그가 펼쳐지는 노드판이 아니기 때문에 <br>도 같이 노출됨
+        // console.log(i);
+        // // 이때의 i는 전역변수임
+
+        // const numbers = [43, 27, 9, 7]; // 몇개인지 모르는 데이터
+        // const len = numbers.length; // 4 return
+
+        // for(let i = 0; i < len; i++){
+        //     console.log(numbers[i]);
+        // }
+        // // 뭐가 얼마나 있는지 모르지만 다 펼쳐짐
+
+        // for of -> 배열에만 사용 가능 / 배열안에 있는 값을 하나씩 들고옴 (of는 키워드 빼먹으면 안됨!)
+        // const numbers = [43, 27, 9, 7];
+        // const numbers = {
+        //     num : 1,
+        //     int : 3,
+        // } -> 타입에러 뜸 -> 생object는 안된다는 뜻
+        // const allArray = [43, '문자', {name : 'Kim', age : 40}, function(){return100}]; // 다 뱉음
+        // 어떤 형태든 배열이면 되는 것!! -> 함수든 오브젝트든 배열의 요소면 된다!
+        // for(let num of numbers){ // num 변수 선언 -> 키워드 of -> numbers 배열 안에 있는 값을 하나씩 num에 가져와서 뿌려!
+        //     console.log(num);
+        // }
+
+        // for in -> 배열과 오브젝트 둘다 사용 가능 / 배열의 인덱스 번호를 차례대로 하나씩 들고옴
+        // 키와 밸류값을 다 가져올 수 있음 근데 오브젝트에 해당 (순서라는게 존재하지 않음)
+        // const allArray = [43, '문자', {name : 'Kim', age : 40}, function(){return100}];
+        // for(let all in allArray){
+        //     console.log(all);
+        //     console.log(allArray[all]); // 배열의 값을 들고 올 때 사용
+        // }
+        // const person = {
+        //     lastName : 'Shim',
+        //     fistName : 'ChaeRim',
+        //     age : 26
+        // } // object는 중괄호로 선언
+        // for(let key in person){
+        //     console.log(key); // 키를 다 들고 옴
+        //     console.log(person[key]); // 오브젝트의 값만 들고 옴
+        //     console.log(person.key); // 안됨 형태 틀림
+        //     console.log(person); // 다 들고 옴
+        // }
+
+        const userStatus = { // 서버에서 넘어오는 데이터라고 생각하면됨
+            alice : 'online',
+            bob : 'offline',
+            charlie : 'online',
+            david : 'offline'
+        }
+        const onlineUsers = []; // 전역변수
+        for(let user in userStatus){ // 객체에서 for in문 사용시 key 값을 가져옴
+            // console.log(user); -> key 값
+            if(userStatus[user] === 'online'){ // 밸류값이 온라인과 같다면
+                onlineUsers.push(user); // 온라인 상태인 유저만 배열에 담김
+            }
+        }
+        console.log(onlineUsers);
+    </script>
+</body>
+</html>

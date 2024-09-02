@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 600px;
+    margin: 50px auto;
+}
+.creatNumberDiv,
+.checkNumberDiv{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+#creatKey{
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #e7e7e7;
+    color: #000;
+    text-align: center;
+}
+/* 텍스트가 없는 상태에서 라인헤이트만 잡으면
+    텍스트 들어왔을 때 딸깍- 하고 내려감
+    그래서 헤이트값을 따로 잡아주고
+    텍스트가 들어왔을 때 가운데에 있도록
+    라인헤이트를 추가로 잡아줌 */
+#checkKey{
+    width: 300px;
+    outline: none;
+    background-color: #e7e7e7;
+    color: #000;
+    line-height: 50px;
+    border: 0;
+    text-align: center;
+    font-size: 26px;
+}
+/* 플레이스홀더가 있어서 라인헤이트만 잡아줘도 괜츈 */
+#checkKey::placeholder{
+    color: #333;
+    font-size: 16px;
+}
+/* placeholder 디자인 하는 방법은 ::placeholder */
+#creatKeyBtn,
+#checkKeyBtn{
+    border: 0;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    width: 120px;
+}
+
+.checkNumberDiv.disableMode #checkKey{
+    color: #ccc;
+}
+.checkNumberDiv.disableMode #checkKeyBtn{
+    background-color: #ccc;
+    cursor: default;
+}
