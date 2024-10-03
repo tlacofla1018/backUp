@@ -1,0 +1,519 @@
+@import './_var.scss';
+@import './shim.scss';
+
+@media (max-width: 1800px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-140px, -570px, 130%);
+        }
+    }
+}
+
+@media (max-width: 1700px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-120px, -510px, 130%);
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-120px, -480px, 130%);
+        }
+    }
+}
+
+@media (max-width: 1560px) {
+    #subGoods{
+        #mainBanner{
+            .textBox-PC{
+                max-width: none;
+                padding: 0 8.75rem;
+                left: 0;
+            }
+        }
+        .contentTitle{
+            max-width: none;
+            padding: 0 8.75rem;
+        }
+        #contentBox{
+            max-width: none;
+            padding: 0 8.75rem;
+        }
+        #bestBox{
+            max-width: none;
+            padding: 0 8.75rem;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-110px, -440px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 400px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-110px, -400px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 363px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    #subGoods{
+        #mainBanner{
+            height: 454px;
+            .textBox-PC{
+                bottom: calc(50% - 127px);
+                .textBox02{
+                    .dN1320{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-80px, -310px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 330px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-90px, -270px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 294px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-100px, -220px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 258px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    #subGoods{
+        #mainBanner{
+            .textBox-PC{
+                padding: 0 5rem;
+            }
+        }
+        .contentTitle{
+            padding: 0 5rem;
+        }
+        #contentBox{
+            padding: 0 5rem;
+        }
+        #bestBox{
+            padding: 0 5rem;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-100px, -180px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 265px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #subGoods{
+        #mainBanner{
+            .textBox-PC{
+                padding: 0 2rem;
+            }
+        }
+        .contentTitle{
+            padding: 0 2rem;
+        }
+        #contentBox{
+            padding: 0 2rem;
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 296px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #bestBox{
+            padding: 0 2rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-100px, -150px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 264px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #subGoods{
+        #mainBanner{
+            @include SubGoodsMainBanner (-100px, -110px, 130%);
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 230px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 874px) {
+    #subGoods{
+        #mainBanner{
+            height: 478px;
+            .textBox-PC{
+                bottom: calc(50% - 139px);
+                .textBox02{
+                    .dN874{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 784px) {
+    #subGoods{
+        #mainBanner{
+            height: 478px;
+            .textBox-PC{
+                bottom: calc(50% - 139px);
+                .bannerText02{
+                    .dN784{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #subGoods{
+        gap: 0;
+        padding-bottom: 60px;
+        #mainBanner{
+            background: none;
+            height: auto;
+            &::before{
+                display: none;
+            }
+            .textBox-MT{
+                width: 100%;
+                padding: 100px 0;
+            }
+        }
+        #contentBox{
+            gap: 0;
+            padding: 0;
+            margin-bottom: 40px;
+            .artist{
+                ul{
+                    li{
+                        width: calc((100% - 20px) / 2);
+                        a{
+                            .goodsContainer{
+                                height: 370px;
+                            }
+                        }
+                    }
+                }
+            }
+            .nam{
+                border-radius: 20px 20px 0 0;
+            }
+            .lee{
+                border-radius: 0 0 20px 20px;
+            }
+            .byun{
+                border-radius: 20px 20px 0 0;
+            }
+            .yoon{
+                border-radius: 0;
+            }
+            .park{
+                border-radius: 0 0 20px 20px;
+            }
+        }
+        #bestBox{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #subGoods{
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 336px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #subGoods{
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 283px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    #subGoods{
+        #mainBanner{
+            .textBox-MT{
+                padding: 40px 0;
+                .bannerText01{
+                    @include f-24-700-36;
+                }
+                .bannerText02{
+                    @include f-18-400-26;
+                }
+            }
+        }
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        width: 100%;
+                        a{
+                            .goodsContainer{
+                                height: 567px;
+                            }
+                        }
+                    }
+                    li:nth-child(2){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #subGoods{
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 525px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    #subGoods{
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 472px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #subGoods{
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 420px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    #subGoods{
+        #contentBox{
+            .artist{
+                ul{
+                    li{
+                        a{
+                            .goodsContainer{
+                                height: 367px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #bestBox{
+            .contentTitle{
+                p{
+                    text-align: center;
+                    .dN350{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
