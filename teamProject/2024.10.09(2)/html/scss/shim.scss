@@ -1,0 +1,335 @@
+// 믹스인
+@import './_var.scss';
+@mixin subGoodsTopBannerTitle {
+    width: 100%;
+    max-width: 1280px;
+    gap: 2.5rem;
+    color: #fff;
+    .textBox01{
+        gap: 0.625rem;
+        .bannerText01{
+            @include f-50-700-72;
+        }
+        .bannerText02{
+            @include f-24-700-36;
+        }
+    }
+    .textBox02{
+        @include f-16-500-24;
+    }
+}
+@mixin goods ($width: 60%) {
+    width: $width;
+    height: auto;
+    transition: all 0.4s ease-in-out;
+    &:hover{
+        width: calc($width + 10%);
+    }   
+}
+@mixin best ($name) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('/img/subGoods/#{$name}.jpg') no-repeat center / cover;
+}
+
+// PC 스타일
+#subGoods{
+    background-color: #fff;
+    a{
+        color: #fff;
+    }
+    // 상단 배너 디자인
+    #subGoodsTopBanner{
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        height: 430px;
+        filter: grayscale(100%);
+        background: url(/img/subGoods/subGoodsTopBanner.jpg) no-repeat center/cover;
+        &::before{
+            content: '';
+            display: block;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+        }
+        .textBox-PC{
+            position: absolute;
+            left: calc((100% - 1280px) / 2);
+            bottom: calc((100% - 230px) / 2);
+            @include subGoodsTopBannerTitle;
+        }
+        .textBox-MT{
+            position: absolute;
+            left: 0;
+            bottom: calc(50% - 200px);
+            width: 100%;
+            max-width: 767px;
+            text-align: center;
+            gap: 2.5rem;
+            color: #fff;
+            .bannerText01{
+                @include f-36-700-52;
+            }
+            .bannerText02{
+                @include f-24-400-36;
+            }
+        }
+    }
+    .contentTitle{
+        width: 100%;
+        max-width: 1280px;
+        color: #000;
+        h3{
+            @include f-32-700-46;
+        }
+        p{
+            @include f-16-500-24;
+        }
+    }
+    #bestBox{
+        width: 100%;
+        max-width: 1280px;
+        gap: 60px;
+        .swiper.mySwiper{
+            width: 100%;
+            .swiper-wrapper{
+                .swiper-slide{
+                    width: calc((100% - 20px) / 2);
+                    height: 732px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    a{
+                        position: relative;
+                        .bestInfo{
+                            width: 100%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transform: translateY(100%); /* 완전히 보이지 않게 아래로 이동 */
+                            overflow: hidden;
+                            background-color: #333;
+                            padding: 20px 40px;
+                            border-radius: 20px;
+                            transition: all 0.4s ease-in-out;
+                            @include f-24-500-36;
+                        }
+                        &:hover .bestInfo{
+                            transform: translateY(0); /* hover 시 위로 올라와 a 태그의 bottom에 맞도록 */
+                        }
+                    }
+                    .bestSlide01{
+                        @include best (bestS1-1);
+                    }
+                    .bestSlide02{
+                        @include best (bestS1-2);
+                    }
+                    .bestSlide03{
+                        @include best (bestS2-1);
+                    }
+                    .bestSlide04{
+                        @include best (bestS2-2);
+                    }
+                    .bestSlide05{
+                        @include best (bestS3-1);
+                    }
+                    .bestSlide06{
+                        @include best (bestS3-2);
+                    }
+                }
+            }
+            .swiperAttachedBtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .nextBtn{
+                    border-radius: 0 6px 6px 0;
+                    padding: 4px 7px 4px 8px;
+                    background-color: #333;
+                }
+                .prevBtn{
+                    border-radius: 6px 0 0 6px;
+                    padding: 4px 8px 4px 7px;
+                    background-color: #333;
+                }
+            }
+        }
+    }
+    #contentBox{
+        width: 100%;
+        max-width: 1280px;
+        text-align: center;
+        gap: 60px;
+        .artist{
+            gap: 40px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-color: #333;
+            position: relative;
+            h3{
+                color: #fff;
+            }
+            .moreBtn{
+                gap: 4px;
+                position: absolute;
+                top: 49px;
+                right: 20px;
+            }
+            ul{
+                li{
+                    width: calc((100% - 40px) / 3);
+                    a{
+                        gap: 20px;
+                        .goodsContainer{
+                            position: relative;
+                            width: 100%;
+                            height: 420px;
+                            border-radius: 20px;
+                            overflow: hidden;
+                            background-color: #ededed;
+                        }
+                        span:last-child{
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .byeon{
+            ul{
+                li{
+                    a{
+                        .goods01{
+                            img{
+                            @include goods (36%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods02{
+                            img{
+                                @include goods (54%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods03{
+                            img{
+                                @include goods (80%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .lee{
+            ul{
+                li{
+                    a{
+                        .goods01{
+                            img{
+                                @include goods (70%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods02{
+                            img{
+                                @include goods (76%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods03{
+                            img{
+                                @include goods (74%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .yoon{
+            ul{
+                li{
+                    a{
+                        .goods01{
+                            img{
+                                @include goods (80%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods02{
+                            img{
+                                @include goods (66%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods03{
+                            img{
+                                @include goods (50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nam{
+            ul{
+                li{
+                    a{
+                        .goods01{
+                            img{
+                                @include goods (64%);                                
+                            }
+                        }
+                    }
+                    a{
+                        .goods02{
+                            img{
+                                @include goods (56%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods03{
+                            img{
+                            @include goods (80%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .park{
+            ul{
+                li{
+                    a{
+                        .goods01{
+                            img{
+                            @include goods (74%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods02{
+                            img{
+                                @include goods (64%);
+                            }
+                        }
+                    }
+                    a{
+                        .goods03{
+                            img{
+                                @include goods (78%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

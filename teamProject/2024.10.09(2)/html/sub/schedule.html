@@ -1,0 +1,65 @@
+<?php include_once("../layout/header-b.html"); ?>
+
+<main id="sub-schedule">
+    <article class="container-1280">
+            <div class="schedule-title d-flex flex-column justify-content-center align-items-center gap-10">
+                <h2>schedule</h2>
+                <p>배우들이 준비한 다채로운 일정과 이벤트를 한눈에 확인해 보세요.</p>
+            </div>
+            <div class="schedule-content">
+                
+                <ul class="schedule-name nav nav-tabs d-flex justify-content-center align-items-center" id="sub-schedule-Tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <h3><a class="nav-link active" id="s-byeon" data-bs-toggle="tab" href="#sub-schedule-byeon" role="tab" aria-controls="byeon" aria-selected="true">변우석</a></h3>
+                        <span class="nav-line"></span>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <h3><a class="nav-link" id="s-lee" data-bs-toggle="tab" href="#sub-schedule-lee" role="tab" aria-controls="lee" aria-selected="false">이지은</a></h3>
+                        <span class="nav-line"></span>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <h3><a class="nav-link" id="s-yoon" data-bs-toggle="tab" href="#sub-schedule-yoon" role="tab" aria-controls="yoon" aria-selected="false">윤계상</a></h3>
+                        <span class="nav-line"></span>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <h3><a class="nav-link" id="s-nam" data-bs-toggle="tab" href="#sub-schedule-nam" role="tab" aria-controls="nam" aria-selected="false">남우현</a></h3>
+                        <span class="nav-line"></span>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <h3><a class="nav-link" id="s-park" data-bs-toggle="tab" href="#sub-schedule-park" role="tab" aria-controls="park" aria-selected="false">박서준</a></h3>
+                    </li>
+                </ul>
+                
+                <div class="tab-content sub-schedule-detail">
+                    <div class="tab-pane fade show active" id="sub-schedule-byeon" role="tabpanel" aria-labelledby="byeon-tab">
+                        <div class="artist-schedule">
+                            <h4>변우석</h4>
+                            <img src="/img/schedule/img01.jpg" alt="변우석 이미지입니다">
+                        </div>
+
+                        <div id="sub-calendar-1"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="sub-schedule-lee" role="tabpanel" aria-labelledby="lee-tab">
+
+                    <div class="tab-pane fade" id="sub-schedule-yoon" role="tabpanel" aria-labelledby="yoon-tab">
+
+                    </div>
+
+                    <div class="tab-pane fade" id="sub-schedule-nam" role="tabpanel" aria-labelledby="nam-tab">
+
+                    </div>
+
+                    <div class="tab-pane fade" id="sub-schedule-park" role="tabpanel" aria-labelledby="park-tab">
+
+                    </div>
+
+                </div>
+            </div>
+    
+        
+
+    </article>
+</main>
+
+<?php include_once("../layout/footer.html"); ?>
