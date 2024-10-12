@@ -15,27 +15,30 @@
         }
     }
     .textBox02{
-        @include f-16-500-24;
+        @include f-16-400-24;
     }
 }
 @mixin goods ($width: 60%) {
-    width: $width;
-    height: auto;
-    transition: all 0.4s ease-in-out;
-    &:hover{
+    img{
+        width: $width;
+        height: auto;
+        transition: all 0.4s ease-in-out;
+    }
+    &:hover img{
         width: calc($width + 10%);
     }   
 }
-@mixin best ($name) {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url('/img/subGoods/#{$name}.jpg') no-repeat center / cover;
+
+.shim_dNHover{
+    display: none;
+}
+.shim_g4{
+    gap: 4px;
 }
 
 // PC 스타일
 #subGoods{
-    background-color: #fff;
+    padding-bottom: 100px;
     a{
         color: #fff;
     }
@@ -45,13 +48,12 @@
         width: 100%;
         max-width: 1920px;
         height: 430px;
-        filter: grayscale(100%);
         background: url(/img/subGoods/subGoodsTopBanner.jpg) no-repeat center/cover;
         &::before{
             content: '';
             display: block;
             height: 100%;
-            background: rgba(0, 0, 0, .6);
+            background: rgba(0, 0, 0, .4);
         }
         .textBox-PC{
             position: absolute;
@@ -79,78 +81,102 @@
     .contentTitle{
         width: 100%;
         max-width: 1280px;
-        color: #000;
+        color: #fff;
+        padding: 0 10px;
         h3{
             @include f-32-700-46;
         }
         p{
-            @include f-16-500-24;
+            @include f-16-400-24;
         }
     }
     #bestBox{
         width: 100%;
-        max-width: 1280px;
+        max-width: 1920px;
         gap: 60px;
-        .swiper.mySwiper{
-            width: 100%;
-            .swiper-wrapper{
-                .swiper-slide{
-                    width: calc((100% - 20px) / 2);
-                    height: 732px;
-                    border-radius: 20px;
-                    overflow: hidden;
-                    a{
-                        position: relative;
-                        .bestInfo{
+        > div{
+            position: relative;
+            padding-bottom: 42px;
+            .swiper.mySwiper{
+                width: 100%;
+                max-width: 1280px;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        width: calc((100% - 20px) / 2);
+                        height: 630px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        a{
                             width: 100%;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            transform: translateY(100%); /* 완전히 보이지 않게 아래로 이동 */
-                            overflow: hidden;
-                            background-color: #333;
-                            padding: 20px 40px;
-                            border-radius: 20px;
-                            transition: all 0.4s ease-in-out;
-                            @include f-24-500-36;
+                            height: 100%;
+                            position: relative;
+                            .goodsHoverBtn{
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                .shopBtn,
+                                .likeBtn{
+                                    cursor: pointer;
+                                    z-index: 3;
+                                    > img{
+                                        width: 28px;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            &:hover .goodsHoverBtn{
+                                display: flex;
+                            }
+                            > img{
+                                width: 100%;
+                                transition: all 0.4s ease-in-out;
+                            }
+                            &:hover > img{
+                                transform: scale(1.1);
+                            }
+                            .bestInfo{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                transform: translateY(100%); /* 완전히 보이지 않게 아래로 이동 */
+                                overflow: hidden;
+                                background-color: #333;
+                                padding: 20px 40px;
+                                border-radius: 18px 18px 0 0;
+                                transition: all 0.4s ease-in-out;
+                                @include f-24-400-36;
+                            }
+                            &:hover .bestInfo{
+                                transform: translateY(0); /* hover 시 위로 올라와 a 태그의 bottom에 맞도록 */
+                            }
                         }
-                        &:hover .bestInfo{
-                            transform: translateY(0); /* hover 시 위로 올라와 a 태그의 bottom에 맞도록 */
-                        }
-                    }
-                    .bestSlide01{
-                        @include best (bestS1-1);
-                    }
-                    .bestSlide02{
-                        @include best (bestS1-2);
-                    }
-                    .bestSlide03{
-                        @include best (bestS2-1);
-                    }
-                    .bestSlide04{
-                        @include best (bestS2-2);
-                    }
-                    .bestSlide05{
-                        @include best (bestS3-1);
-                    }
-                    .bestSlide06{
-                        @include best (bestS3-2);
                     }
                 }
             }
-            .swiperAttachedBtn{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .nextBtn{
-                    border-radius: 0 6px 6px 0;
-                    padding: 4px 7px 4px 8px;
-                    background-color: #333;
+            .swiper-pagination{
+                bottom: 0;
+            }
+            .swiper-pagination-bullet {
+                @include swiPagBul-fff;
+            }
+            .swiper-pagination-bullet-active {
+                @include swiPagBulAct-fff;
+            }
+            .swiper-button-prev{
+                @include swiperPrevBtn-fff;
+                top: calc((100% - 70.6px)/2);
+                left: 10%;
+                &::after{
+                    content: '';
                 }
-                .prevBtn{
-                    border-radius: 6px 0 0 6px;
-                    padding: 4px 8px 4px 7px;
-                    background-color: #333;
+            }
+            .swiper-button-next{
+                @include swiperNextBtn-fff;
+                top: calc((100% - 70.6px)/2);
+                right: 10%;
+                &::after{
+                    content: '';
                 }
             }
         }
@@ -167,20 +193,41 @@
             border-radius: 20px;
             background-color: #333;
             position: relative;
-            h3{
-                color: #fff;
-            }
-            .moreBtn{
-                gap: 4px;
-                position: absolute;
-                top: 49px;
-                right: 20px;
+            .contentTitleBox{
+                padding: 0 10px;
+                h3{
+                    color: #fff;
+                    @include f-32-700-46;
+                }
+                .moreBtn{
+                    gap: 4px;
+                }
             }
             ul{
                 li{
                     width: calc((100% - 40px) / 3);
                     a{
+                        position: relative;
                         gap: 20px;
+                        .goodsHoverBtn{
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            .shopBtn,
+                            .likeBtn{
+                                cursor: pointer;
+                                transition: all 0.4s ease-in-out;
+                                z-index: 3;
+                                > img{
+                                    width: 28px;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        &:hover .shopBtn,
+                        &:hover .likeBtn{
+                            display: flex;
+                        }
                         .goodsContainer{
                             position: relative;
                             width: 100%;
@@ -190,7 +237,12 @@
                             background-color: #ededed;
                         }
                         span:last-child{
-                            gap: 10px;
+                            .itemName{
+                                @include f-16-400-24;
+                            }
+                            .itemPrice{
+                                @include f-16-500-24;
+                            }
                         }
                     }
                 }
@@ -201,23 +253,17 @@
                 li{
                     a{
                         .goods01{
-                            img{
                             @include goods (36%);
-                            }
                         }
                     }
                     a{
                         .goods02{
-                            img{
-                                @include goods (54%);
-                            }
+                            @include goods (54%);
                         }
                     }
                     a{
                         .goods03{
-                            img{
-                                @include goods (80%);
-                            }
+                            @include goods (80%);
                         }
                     }
                 }
@@ -228,23 +274,17 @@
                 li{
                     a{
                         .goods01{
-                            img{
-                                @include goods (70%);
-                            }
+                            @include goods (70%);
                         }
                     }
                     a{
                         .goods02{
-                            img{
-                                @include goods (76%);
-                            }
+                            @include goods (76%);
                         }
                     }
                     a{
                         .goods03{
-                            img{
-                                @include goods (74%);
-                            }
+                            @include goods (74%);
                         }
                     }
                 }
@@ -255,23 +295,17 @@
                 li{
                     a{
                         .goods01{
-                            img{
-                                @include goods (80%);
-                            }
+                            @include goods (80%);
                         }
                     }
                     a{
                         .goods02{
-                            img{
-                                @include goods (66%);
-                            }
+                            @include goods (66%);
                         }
                     }
                     a{
                         .goods03{
-                            img{
-                                @include goods (50%);
-                            }
+                            @include goods (50%);
                         }
                     }
                 }
@@ -282,23 +316,17 @@
                 li{
                     a{
                         .goods01{
-                            img{
-                                @include goods (64%);                                
-                            }
+                            @include goods (64%);
                         }
                     }
                     a{
                         .goods02{
-                            img{
-                                @include goods (56%);
-                            }
+                            @include goods (56%);
                         }
                     }
                     a{
                         .goods03{
-                            img{
                             @include goods (80%);
-                            }
                         }
                     }
                 }
@@ -309,23 +337,17 @@
                 li{
                     a{
                         .goods01{
-                            img{
                             @include goods (74%);
-                            }
                         }
                     }
                     a{
                         .goods02{
-                            img{
-                                @include goods (64%);
-                            }
+                            @include goods (64%);
                         }
                     }
                     a{
                         .goods03{
-                            img{
-                                @include goods (78%);
-                            }
+                            @include goods (78%);
                         }
                     }
                 }
