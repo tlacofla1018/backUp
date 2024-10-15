@@ -1,0 +1,10 @@
+sftp.json
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+.Spotlight-V100
+.Trashes
+sftp.json
