@@ -1,0 +1,69 @@
+<?php include_once("../layout/header-b.html"); ?>
+
+<main id="sub-join" class="sub-page">
+    <section class="sub-top-banner join-banner">
+        <div class="banner-text container-1280">
+            <h2 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">JOIN</h2>
+            <p class="sub-title" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">지금 UNIVERSE에 가입하고 특별한 여정을 시작하세요!</p>
+            <p class="detail" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1000">
+            <!-- <span class="dN-768"> -->
+                지금 가입하고 유니버스 소식을 가장 먼저 만나보세요!<br>
+                우리와 함께하는 모든 순간, 당신의 열정과 사랑이 더욱 빛나는 특별한 시간이 기다립니다.
+            <!-- </span> -->
+            </p>
+        </div>
+    </section>
+
+    <section class="sub-wrap join-wrap container-1280">
+        <article class="sub-content join-content">
+            <div class="sub-page-title" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1000">회원가입</div>
+            <form id="join-form" class="mx-auto d-flex flex-column">
+                <div class="input-wrap input-text">
+                    <div class="name-required d-flex justify-content-between">
+                        <label for="join-name" class="required label-style">이름</label>
+                        <p class="required-text required">필수 입력사항입니다</p>
+                    </div>
+                    <input class="input-style" type="text" id="join-name" placeholder="이름" required>
+                </div>
+                <div class="input-wrap input-select">
+                    <label class="join-number label-style">일반전화</label>
+                    <div class="number-wrap d-flex">
+                        <select name="number" id="join-number" class="input-short-style input-style">
+                            <option disabled selected>지역번호</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                        <input class="input-short-style input-style" type="text">
+                        <input class="input-short-style input-style" type="text">
+                    </div>
+                </div>
+                <div class="input-wrap input-select">
+                    <label class="join-number label-style required">휴대전화</label>
+                    <div class="input-btn-wrap">
+                        <div class="number-wrap d-flex">
+                            <select name="number" id="join-number" class="input-short-style input-style">
+                                <option disabled selected>휴대번호</option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <input class="input-short-style input-style" type="text">
+                            <input class="input-short-style input-style" type="text">
+                        </div>
+                        <div class="join-btn num-btn">인증번호 발송</div>
+                    </div>
+
+                </div>
+            </form>
+        </article>
+    </section>
+</main>
+
+<?php include_once("../layout/footer.html"); ?>

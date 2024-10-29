@@ -1,0 +1,823 @@
+@import './_var.scss';
+// 필수(768,580,320)
+@media (max-width: 1440px) {
+    .sub-page{
+        .sub-wrap, .container-1280{
+            padding: 0 1rem;
+        }
+    }
+}
+@media (max-width: 1320px) {
+    .container-1280{
+        width: 100%;
+    }
+
+}
+@media (max-width: 1280px) {
+    .sub-page{
+        .sub-top-banner{
+            .banner-text{
+                .title{
+                    padding-bottom: 0;
+                }
+                .sub-title{
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+        .sub-wrap, .container-1280{
+            padding: 0 2rem;
+        }
+        .sub-wrap{
+            .sub-content{
+                .artist-name{
+                    .nav-item{
+                        .nav-link{
+                            padding: 0 48px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        .artist-info{
+                            .sub-artist-info-2{
+                                .info-detail{
+                                    .sub-artist-best-swiper{
+                                        .swiper-wrapper{
+                                            .swiper-slide{
+                                                .img-wrap{
+                                                    .sub-best{
+                                                        height: 320px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        padding: 40px;
+                                        .hidden{
+                                            display: none;
+                                        }
+                                        ul{
+                                            margin-top: 24px;
+                                            gap: 24px;
+                                            li{
+                                                .detail{
+                                                    align-items: flex-start;
+                                                    flex-direction: column;
+                                                    gap: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        .artist-info{
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        padding: 24px;
+                                        ul{
+                                            gap: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1150px){
+    .sub-page{
+        .sub-wrap{
+            .sub-content{
+                .artist-name{
+                    margin: 60px 0;
+                    .nav-item{
+                        .nav-link{
+                            padding: 0 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        .artist-info{
+                            .sub-artist-info-1{
+                                padding-left: 24px;
+                                p{
+                                    padding: 10px 0 20px;
+                                }
+                            }
+                            .sub-artist-info-2{
+                                .info-detail{
+                                    .sub-artist-best-swiper{
+                                        .swiper-wrapper{
+                                            .swiper-slide{
+                                                .img-wrap{
+                                                    .text{
+                                                        .best-title{
+                                                            font-size: 1rem;
+                                                        }
+                                                        .best-sub{
+                                                            font-size: .875rem;
+                                                        }
+                                                    }
+                                                    .sub-best{
+                                                        height: 250px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .swiper-button-prev,
+                                        .swiper-button-next{
+                                            top: 34%;
+                                        }
+                                    }
+                                }
+                            }
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        width: 32%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-schedule{
+        .container-1280{
+            .schedule-content{
+                .sub-schedule-detail{
+                    .tab-pane{
+                        .artist-schedule-name{
+                            h4{
+                                font-size: 1.75rem;
+                            }
+                            img{
+                                width: 90px;
+                            }
+                        }
+                        .fc-today-button.fc-button.fc-button-primary{
+                            font-size: 1.5rem;
+                        }
+                        .fc-toolbar-title{
+                            font-size: 1.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .dB-990{
+        display: block;
+    }
+    #sub-artist{
+        .artist-wrap{
+            padding: 0;
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        h4,h5{
+                            text-align: center;
+                            margin-bottom: 40px;
+                        }
+                        .artist-info{
+
+                            .frame-wrap{
+                                display: none;
+                            }
+                            .sub-artist-main-swiper{
+                                display: block;
+                            }
+                            .sub-artist-info-1,
+                            .sub-artist-info-2,
+                            .sub-artist-info-3{
+                                padding: 0 2rem;
+                            }
+                            .sub-artist-info-1{
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                text-align: center;
+                                padding: 40px 0 0;
+                                p{
+                                    padding: 0 0 40px; 
+                                }
+                            }
+                            .sub-artist-info-2{
+                                .info-detail{
+                                    .sub-artist-best-swiper{
+                                        display: none;
+                                    }
+                                    .sub-artist-best-m-swiper{
+                                        display: block;
+                                        max-width: 960px;
+                                        .swiper-wrapper{
+                                            .swiper-slide{
+                                                .img-wrap{
+                                                    .sub-best{
+                                                        width: 220px;
+                                                        height: 320px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        h6{
+                                            text-align: center;
+                                        }
+                                        ul{
+                                            margin-top: 1rem;
+                                            li{
+                                                .detail{
+                                                    .sub{
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 880px) {
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        .artist-info{
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    gap: 40px;
+                                    flex-direction: column;
+                                    .filmo{
+                                        width: 70%;
+                                        margin: 0 auto;
+                                        ul{
+                                            margin-top: 20px;
+                                            gap: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .dN-768{
+        display: none;
+    }
+    .dB-768{
+        display: block;
+    }
+    .sub-page{
+        .sub-top-banner{
+            height: 370px;
+            .banner-text{
+                text-align: center;
+                .title{
+                    @include f-50-60-700;
+                    padding-bottom: 30px;
+                }
+                .sub-title{
+                    display: none;
+                }
+                .detail{
+                    @include f-24-36-400;
+                }
+            }
+        }
+        .sub-wrap, .container-1280{
+            padding: 0 1rem;
+        }
+        .sub-wrap{
+            .sub-content{
+                .sub-page-title{
+                    display: block;
+                }
+                .artist-name{
+                    margin: 20px 0 80px;
+                    gap: 28px;
+                    .nav-item{
+                        .nav-link{
+                            padding: 0;
+                        }
+                        .nav-line{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        h4,h5{
+                            @include f-28-42-700;
+                            margin-bottom: 40px;
+                        }
+                        .artist-info{
+                            .sub-artist-main-swiper{
+                                .swiper-pagination{
+                                    margin-top: 40px;
+                                }
+                            }
+                            .sub-artist-info-1{
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                text-align: center;
+                                padding: 40px 0 0;
+                                p{
+                                    @include f-20-30-400;
+                                    padding: 0 0 40px;
+                                }
+                            }
+                            .sub-artist-info-2{
+                                .info-detail{
+                                    .sub-artist-best-m-swiper{
+                                        .swiper-wrapper{
+                                            .swiper-slide{
+                                                .img-wrap{
+                                                    .sub-best{
+                                                        width: 260px;
+                                                        height: 370px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        h6{
+                                            @include f-24-36-700;
+                                        }
+                                        ul{
+                                            li{
+                                                @include f-20-30-400;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-schedule{
+        .schedule-wrap{
+            .schedule-content{
+                .event-popup{
+                    display: none;
+                }
+                .sub-schedule-detail{
+                    .tab-pane{
+                        gap: 0;
+                        .artist-schedule-name{
+                            padding: 2px 40px;
+                            margin-bottom: 20px;
+                            h4{
+                                @include f-24-36-700;
+                            }
+                            img{
+                                width: 48px;
+                            }
+                        }
+                        .sub-calendar-m-container{
+                            display: block;
+                        }
+                        .fc{
+                            .fc-toolbar.fc-header-toolbar{
+                                padding: 18px 24px;
+                            }
+                            .fc-button-group{
+                                width: 78px;
+                                height: 32px
+                            }
+                            .fc-button .fc-icon{
+                                font-size: 1.3rem;
+                            }
+                            .fc-daygrid-day-number{
+                                @include f-18-26-700;
+                                line-height: 90px
+                            }
+                            .fc-col-header-cell-cushion{
+                                @include f-16-24-400;
+                            }
+                            .fc-daygrid-day.fc-day-today .fc-daygrid-day-top > a,
+                            .fc-daygrid-day-top > a.eventText{
+                                padding: 16px;
+                            }
+                            .fc-daygrid-body-unbalanced .fc-daygrid-day-events{
+                                display: none;
+                            }
+                        }
+                        .fc-today-button.fc-button.fc-button-primary{
+                            width: 78px;
+                            height: 32px;
+                            padding: 0;
+                            @include f-16-24-500;
+                        }
+                        .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child),
+                        .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child){
+                            padding: 0;
+                            line-height: 10px;
+                        }
+                        .fc-toolbar-title{
+                            @include f-24-36-700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 630px) {
+    .sub-page{
+        .sub-top-banner{
+            .banner-text{
+                .title{
+                    font-size: 2.5rem;
+                    line-height: 58px;
+                }
+                .detail{
+                    font-size: 1.25rem;
+                    line-height: 30px;
+                }
+            }
+        }
+        .sub-wrap{
+            .sub-content{
+                .sub-page-title{
+                    font-size: 1.75rem;
+                    line-height: 42px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 580px) {
+    .sub-page{
+        padding-bottom: 60px;
+        .sub-top-banner{
+            height: 250px;
+            .banner-text{
+                text-align: center;
+                .title{
+                    @include f-30-44-700;
+                    padding-bottom: 20px;
+                }
+                .detail{
+                    @include f-18-26-400;
+                }
+            }
+        }
+        .sub-wrap{
+            .sub-content{
+                .sub-page-title{
+                    margin-top: 60px;
+                    @include f-24-36-700;
+                }
+                .artist-name{
+                    margin: 20px 0 60px;
+                    gap: 20px;
+                    .nav-item{
+                        .nav-link{
+                            @include f-20-30-400;
+                            &.active{
+                                @include f-20-30-700; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        h4,h5{
+                            @include f-20-30-700;
+                            margin-bottom: 20px;
+                        }
+                        .artist-info{
+                            .sub-artist-info-1{
+                                p{
+                                    @include f-16-24-400;
+                                }
+                            }
+                            .sub-artist-info-2{
+                                .info-detail{
+                                    .sub-artist-best-m-swiper{
+                                        .swiper-wrapper{
+                                            .swiper-slide{
+                                                .img-wrap{
+                                                    .text{
+                                                        .best-title{
+                                                            @include f-18-26-700;
+                                                        }
+                                                        .best-sub{
+                                                            @include f-16-24-400;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        padding: 40px;
+                                        h6{
+                                            @include f-18-26-400;
+                                        }
+                                        ul{
+                                            li{
+                                                @include f-16-24-400;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-schedule{
+        .schedule-wrap{
+            .schedule-content{
+                .sub-schedule-detail{
+                    .tab-pane{
+                        .artist-schedule-name{
+                            h4{
+                                @include f-20-30-700;
+                            }
+                        }
+                        .fc-toolbar-title{
+                            @include f-20-30-700;
+                        }
+                        .sub-calendar-container .fc-daygrid-day-number{
+                            @include f-18-26-700;
+                        }
+                        .sub-calendar-container .fc-col-header-cell-cushion{
+                            @include f-16-24-400;
+                        }
+                        .sub-calendar-m-container{
+                            > p{
+                                @include f-20-30-700;
+                                margin: 60px 0 20px;
+                            }
+                            .sub-schedule-m-detail{
+                                .event-item{
+                                    .event-detail{
+                                        .event-title{
+                                            @include f-18-26-700;
+                                        }
+                                        .event-date{
+                                            @include f-14-20-400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        .artist-info{
+                            .sub-artist-info-1{
+                                .btn-wrap{
+                                    flex-direction: column;
+                                }
+                            }
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo-3{
+                                        ul{
+                                            li{
+                                                .detail{
+                                                    flex-direction: column;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-schedule{
+        .schedule-wrap{
+            .schedule-content{
+                .sub-schedule-detail{
+                    .tab-pane{
+                        .sub-calendar-container{
+                            .fc-daygrid-day-top{
+                                height: 90px;
+                                line-height: 90px;
+                            }
+                        }
+                        .sub-calendar-m-container{
+                            .sub-schedule-m-detail{
+                                height: 600px;
+                                .event-item{
+                                    gap: 10px;
+                                    padding: 10px;
+                                    &:last-child{
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .dB-480{
+        display: block;
+    }
+    .sub-page{
+        padding-bottom: 40px;
+        .sub-top-banner{
+            height: 200px;
+        }
+        .sub-wrap{
+            .sub-content{
+                .sub-page-title{
+                    margin-top: 40px;
+                }
+                .artist-name{
+                    margin: 20px 0 40px;
+                }
+            }
+        }
+    }
+    #sub-artist{
+        .artist-wrap{
+            .artist-content{
+                .sub-artist-detail{
+                    .tab-pane{
+                        .artist-info{
+                            .sub-artist-info-3{
+                                .filmo-wrap{
+                                    .filmo{
+                                        width: 100%;
+                                        h6{
+                                            padding-bottom: 4px;
+                                        }
+                                        ul{
+                                            li{
+                                                gap: 0.5rem;
+                                                .detail{
+                                                    gap: 0.2rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sub-schedule{
+        .schedule-wrap{
+            .schedule-content{
+                .sub-schedule-detail{
+                    .tab-pane{
+                        .fc-today-button.fc-button.fc-button-primary,
+                        .fc .fc-button-group{
+                            width: 60px;
+                        }
+                        .fc{
+                            .fc-daygrid-day.fc-day-today .fc-daygrid-day-top > a,
+                            .fc-daygrid-day-top > a.eventText{
+                                padding: 8px;
+                            }
+                            .fc-toolbar.fc-header-toolbar{
+                                padding: 15px 10px;
+                            }
+                        }
+                        .artist-schedule-name{
+                            padding: 2px 15px;
+                        }
+                        .sub-calendar-container{
+                            .fc-daygrid-day-top{
+                                height: 70px;
+                                line-height: 70px;
+                            }
+                        }
+                        .sub-calendar-m-container{
+                            > p{
+                                margin: 40px 0 20px;
+                            }
+                            .sub-schedule-m-detail{
+                                height: 450px;
+                                .event-item{
+                                    .event-time{
+                                        font-size: 12px;
+                                        height: 50px;
+                                        width: 50px;
+                                        line-height: 3.6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
