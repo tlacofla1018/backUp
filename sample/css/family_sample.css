@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+footer{
+    width: 300px;
+    margin: 400px auto;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul li{
+    width: 140px;
+}
+
+/* 패밀리 사이트 1 */
+.family1{
+    width: 100%;
+    position: relative;
+}
+.family1 input{
+    display: none;
+}
+.family1 label{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border: solid 1px #333;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+.family1 .family1_list{
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    z-index: 10;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.family1 .family1_list li a{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+    background-color: #ccc;
+    border-bottom: dashed 1px #333;
+    transition: all 0.4s ease-in-out;
+}
+.family1 .family1_list li:last-child a{
+    border: 0;
+}
+.family1 .family1_list li:hover a,
+.family1 label:hover{
+    color: #fff;
+    background-color: #333;
+}
+.family1 input:checked ~ .family1_list{
+    height: 163px;
+}
+
+/* 패밀리 사이트 2 */
+.family2{
+    position: relative;
+}
+.family2 .family2_btn{
+    font-size: 16px;
+    width: 100%;
+    line-height: 40px;
+    color: #000;
+    background-color: #fff;
+    border: solid 1px #333;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+.family2 .family2_list{
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.family2 .family2_list li a{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+    background-color: #ccc;
+    border-bottom: dashed 1px #333;
+    transition: all 0.4s ease-in-out;
+}
+.family2 .family2_list li:last-child a{
+    border: 0;
+}
+.family2 .family2_list li:hover a,
+.family2 .family2_btn:hover{
+    color: #fff;
+    background-color: #333;
+}
+.family2_slide{
+    height: 163px !important;
+}

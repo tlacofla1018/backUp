@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* 스타일 */
+main{
+    width: 800px;
+    margin: 200px auto;
+}
+main ul{
+    display: flex;
+    position: relative;
+}
+main ul li{
+    width: 50%;
+}
+main ul li input{
+    display: none;
+}
+main ul li label{
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #767676;
+    background-color: #ccc;
+}
+main ul li input:checked ~label{
+    color: #fff;
+    background-color: #333;
+}
+main ul li .tab_content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 1px #333;
+    background-color: #fff;
+    z-index: 50;
+}
+main ul li input:checked ~.tab_content{
+    z-index: 100;
+}
+
+/* 공지사항 */
+.notice_content{
+    display: flex;
+    flex-direction: column;
+}
+.notice_content dl{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: dashed 1px #ccc;
+}
+.notice_content dl:last-child{
+    border: 0;
+}
+.notice_content dl dt{
+    width: 70%;
+}
+.notice_content dl dt a,
+.notice_content dl dd a{
+    display: block;
+    font-size: 14px;
+    line-height: 40px;
+    color: #767676;
+    transition: all .4s ease-in-out;
+}
+.notice_content dl:hover dt a,
+.notice_content dl:hover dd a{
+    color: #000;
+    font-size: 16px;
+}
+
+/* 갤러리 */
+.gallery_content ul{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.gallery_content ul li{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gallery_content .gallery_img{
+    width: 100%;
+    height: 130px;
+}
+.gallery_content .gallery_img a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.gallery_content .gallery_img a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.6;
+    transition: all 0.6s ease-in-out;
+}
+.gallery_content ul li:hover .gallery_img a img{
+    opacity: 1;
+}
+.gallery_content .img_name a{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #767676;
+    transition: all .4s ease-in-out;
+}
+.gallery_content ul li:hover .img_name a{
+    color: #000;
+    font-size: 16px;
+}
+
+/* 모달 팝업 */
+.modal_popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .4);
+    z-index: 9999999;
+    display: none;
+}
+.modal_popup.show{
+    display: block;
+}
+.modal_popup div{
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 200px);
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+}
+.modal_popup .modal_close{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    line-height: 40px;
+    background-color: transparent;
+    border: solid 1px #333;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.modal_popup .modal_close:hover{
+    color: #fff;
+    background-color: #333;
+}
+
+/* 레이어 팝업 */
+.layer_popup{
+    position: fixed;
+    top: calc(50% - 300px);
+    left: calc(50% - 200px);
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: solid 1px #333;
+    z-index: 9999999;
+    display: none;
+}
+.layer_popup div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.layer_popup.show{
+    display: block;
+}
+.layer_popup .layer_close{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    line-height: 40px;
+    background-color: transparent;
+    border: solid 1px #333;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.layer_popup .layer_close:hover{
+    color: #fff;
+    background-color: #333;
+}

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+main{
+    width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 좌우 슬라이드 */
+.slide_banner_lr{
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+.slide_banner_lr ul{
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+.slide_banner_lr ul li{
+    width: 100%;
+    height: 100%;
+}
+.slide_banner_lr ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.slide_banner_lr ul li a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 상하 슬라이드 */
+.slide_banner_tb{
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+.slide_banner_tb ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 99999px;
+}
+.slide_banner_tb ul li{
+    width: 100%;
+    height: 300px;
+}
+.slide_banner_tb ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.slide_banner_tb ul li a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 페이드 인아웃 */
+.fade_banner ul{
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+.fade_banner ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.fade_banner ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.fade_banner ul li a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
