@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+<title>지그재그 그리드 레이아웃</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    background: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+/*     start     */
+
+.beauty {
+    width: 1600px;
+}
+
+.beauty:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.beauty h3 {
+    text-align: left;
+    color: #666;
+    font-size: 1rem;
+}
+
+.beauty h2 {
+    text-align: left;
+    color: #333;
+    font-size: 2rem;
+    }
+
+.beauty section p {
+    font-size: 1rem;
+    text-align: left;
+    color: #666;
+}
+
+.beauty button {
+    width: 140px;
+    text-align: center;
+}
+
+.beauty article> :nth-child(2) {
+    padding-left: 40px;
+}
+
+.beauty article> :nth-child(3) {
+    padding-left: 40px;
+}
+
+.beauty article:nth-child(1){
+    display: flex;
+}
+.beauty article:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.beauty article{
+    display: flex;
+}
+
+.beauty article span {
+    background: url('https://i.pinimg.com/564x/d7/e1/6b/d7e16b245a400f3386eeccf55843185a.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: block;
+    width: 800px;
+    height: 450px;
+}
+
+.beauty article > div {
+    width: 50%;
+    gap: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="beauty mx-auto">
+    <article>
+        <span></span>
+        <div class="d-flex flex-column justify-content-center">
+            <h3>Designer Story</h3>
+            <h2>Jacob Jensen<br>
+            exist to create</h2>
+            <p>
+                클래식 디자인은 우리 브랜드의 선구자적 전통을 상징하는 특징이<br> 되었습니다. 최첨단 TV Beovision Harmony의 탄생을 향해 우리를 인도<br><br>
+                마법같은 동작과 인간 중심적 디자인의 정수를 보여주는
+                사운드와<br> 비전을 직접 체험하는 시간을 가져보세요.강력한 사운드와 컴팩트한 <br>디자인의 개인 및 휴대용 제품과 공간 음악의 시간을 함께 하는 <br>만나보는 시간을 가지고 유연하고 몰입감 있는 사운드바
+            </p>
+            <button>READ MORE</button>
+        </div>
+    </article>
+    <article>
+        <span></span>
+        <div class="d-flex flex-column justify-content-center">
+            <h3>Designer Story</h3>
+            <h2>Jacob Jensen<br>
+            exist to create</h2>
+            <p>
+                클래식 디자인은 우리 브랜드의 선구자적 전통을 상징하는 특징이<br> 되었습니다. 최첨단 TV Beovision Harmony의 탄생을 향해 우리를 인도<br><br>
+                마법같은 동작과 인간 중심적 디자인의 정수를 보여주는
+                사운드와<br> 비전을 직접 체험하는 시간을 가져보세요.강력한 사운드와 컴팩트한 <br>디자인의 개인 및 휴대용 제품과 공간 음악의 시간을 함께 하는 <br>만나보는 시간을 가지고 유연하고 몰입감 있는 사운드바
+            </p>
+            <button>READ MORE</button>
+        </div>
+    </article>
+</section>
+
+</body>
+
+</html>
