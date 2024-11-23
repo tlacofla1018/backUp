@@ -1,0 +1,66 @@
+// 그리드섹션
+.full_page_container{
+    width: 100%;
+    height: 100vh;
+}
+
+#grid_page {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    h3 {
+        text-align: left;
+        color: #666;
+        font-size: 1rem;
+    }
+    h2 {
+        text-align: left;
+        color: #333;
+        font-size: 2rem;
+    }
+    section p {
+        font-size: 1rem;
+        text-align: left;
+        color: #666;
+    }
+
+    .grid_page_container{
+        display: flex;
+        height: 50%;
+        .grid_contents {
+            padding-left: 40px;
+            gap: 20px;
+        }
+        .grid_img {
+            background: url('https://i.pinimg.com/564x/d7/e1/6b/d7e16b245a400f3386eeccf55843185a.jpg') no-repeat;
+            background-size: cover;
+            background-position: top center;
+            display: block;
+            width: 50%;
+        }
+        .grid_contents {
+            width: 50%;
+            gap: 20px;
+            button {
+                width: 140px;
+                gap: 8px;
+                font-size: 0.7rem;
+                line-height: 36px;
+                text-transform: uppercase;
+                border: 1px solid #ccc;
+                background: white;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            button:hover {
+                background: crimson;
+                color: white;
+            }
+        }
+    }
+    .cafe24_container{
+        flex-direction: row-reverse;
+    }
+}
